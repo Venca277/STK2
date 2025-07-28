@@ -120,4 +120,72 @@
   <metadata name="kryptonPalette1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        rfkMCDNfHBN5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQcAAAAAERkR
+        bbohFo7/KRyy/zMi2/8xIdX/JBmf/y8gzP8zI9z/Jxuq/ygbrP8yItv/JBia/ygbrP8yItr/MyLb/ygb
+        r/8hFpD/GBBntAAAAA0BAQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAMCDQABgQZUQ8KQecfFYbsIBWJ7CAViewfFYfsIBWI7CAVi+wZEGvsGRFt7CAVi+wfFYTsHhSD7CAV
+        iewgFYnsHxWE7Q4KPuUFBBdLCgcsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP4AAH/8AAA//AAAP/gA
+        AB/wAAAf8AAAD+AAAAfgAAAHwAAAA8AAAAOAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAcAA
+        AAPAAAAD4AAAB+AAAAfwAAAP8AAAH/gAAB/8AAA//AAAP/4AAH8=
+</value>
+  </data>
 </root>
