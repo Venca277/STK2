@@ -14,7 +14,6 @@ namespace STK2
         public IniFile(string path)
         {
             this.path = path;
-
         }
 
         [DllImport("kernel32", CharSet = CharSet.Unicode)]
