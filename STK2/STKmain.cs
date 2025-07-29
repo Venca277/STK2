@@ -17,5 +17,22 @@ namespace STK2
         {
             InitializeComponent();
         }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonComboBox1_Enter(object sender, EventArgs e)
+        {
+            kryptonComboBox1.SelectionStart = kryptonComboBox1.Text.Length;
+            kryptonComboBox1.SelectionLength = 0;
+        }
+
+        private void kryptonComboBox1_Click(object sender, EventArgs e)
+        {
+            kryptonComboBox1.SelectionStart = kryptonComboBox1.Text.Length;
+            kryptonComboBox1.SelectionLength = 0;
+        }
     }
 }
