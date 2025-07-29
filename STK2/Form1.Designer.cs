@@ -86,7 +86,7 @@
             // 
             this.kryptonButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.kryptonButton1.CausesValidation = false;
-            this.kryptonButton1.Location = new System.Drawing.Point(235, 276);
+            this.kryptonButton1.Location = new System.Drawing.Point(230, 287);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -176,7 +176,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(235, 372);
+            this.label2.Location = new System.Drawing.Point(230, 383);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 36);
             this.label2.TabIndex = 3;
@@ -195,7 +195,7 @@
             // 
             this.autologCheckBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.autologCheckBox.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ItalicControl;
-            this.autologCheckBox.Location = new System.Drawing.Point(230, 236);
+            this.autologCheckBox.Location = new System.Drawing.Point(230, 250);
             this.autologCheckBox.Name = "autologCheckBox";
             this.autologCheckBox.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.autologCheckBox.Size = new System.Drawing.Size(225, 31);
