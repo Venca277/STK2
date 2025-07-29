@@ -64,6 +64,23 @@
             this.kryptonTreeView1 = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTextBox5 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTextBox6 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTextBox7 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
+            this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -312,12 +329,240 @@
             this.kryptonButton2.TabIndex = 4;
             this.kryptonButton2.Values.Text = "Odebrat vozidlo";
             // 
+            // kryptonPanel1
+            // 
+            this.kryptonPanel1.Controls.Add(this.kryptonTextBox7);
+            this.kryptonPanel1.Controls.Add(this.kryptonTextBox6);
+            this.kryptonPanel1.Controls.Add(this.kryptonTextBox3);
+            this.kryptonPanel1.Controls.Add(this.kryptonTextBox4);
+            this.kryptonPanel1.Controls.Add(this.kryptonTextBox5);
+            this.kryptonPanel1.Controls.Add(this.kryptonTextBox2);
+            this.kryptonPanel1.Controls.Add(this.kryptonTextBox1);
+            this.kryptonPanel1.Controls.Add(this.label7);
+            this.kryptonPanel1.Controls.Add(this.label6);
+            this.kryptonPanel1.Controls.Add(this.label5);
+            this.kryptonPanel1.Controls.Add(this.label4);
+            this.kryptonPanel1.Controls.Add(this.label3);
+            this.kryptonPanel1.Controls.Add(this.label2);
+            this.kryptonPanel1.Controls.Add(this.label1);
+            this.kryptonPanel1.Location = new System.Drawing.Point(428, 12);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.Size = new System.Drawing.Size(778, 416);
+            this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.kryptonPanel1.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.kryptonPanel1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label1.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(20, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Značka a model: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label2.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(20, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 36);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Druh vozidla: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label3.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Location = new System.Drawing.Point(20, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 36);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "SPZ / RZ: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label4.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Location = new System.Drawing.Point(20, 190);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 36);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "VIN: ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label5.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.Location = new System.Drawing.Point(20, 250);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(283, 36);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Datum první registrace: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label6.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(20, 310);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(189, 36);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Typ a varianta: ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label7.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(20, 370);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(202, 36);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Barva karoserie: ";
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Location = new System.Drawing.Point(327, 13);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.PasswordChar = '•';
+            this.kryptonTextBox1.Size = new System.Drawing.Size(436, 43);
+            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox1.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonTextBox1.StateCommon.Border.Rounding = 20;
+            this.kryptonTextBox1.StateCommon.Border.Width = 1;
+            this.kryptonTextBox1.TabIndex = 7;
+            // 
+            // kryptonTextBox2
+            // 
+            this.kryptonTextBox2.Location = new System.Drawing.Point(327, 63);
+            this.kryptonTextBox2.Name = "kryptonTextBox2";
+            this.kryptonTextBox2.PasswordChar = '•';
+            this.kryptonTextBox2.Size = new System.Drawing.Size(436, 43);
+            this.kryptonTextBox2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonTextBox2.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBox2.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.kryptonTextBox2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox2.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonTextBox2.StateCommon.Border.Rounding = 20;
+            this.kryptonTextBox2.StateCommon.Border.Width = 1;
+            this.kryptonTextBox2.TabIndex = 8;
+            // 
+            // kryptonTextBox3
+            // 
+            this.kryptonTextBox3.Location = new System.Drawing.Point(327, 123);
+            this.kryptonTextBox3.Name = "kryptonTextBox3";
+            this.kryptonTextBox3.PasswordChar = '•';
+            this.kryptonTextBox3.Size = new System.Drawing.Size(436, 43);
+            this.kryptonTextBox3.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonTextBox3.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBox3.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.kryptonTextBox3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox3.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonTextBox3.StateCommon.Border.Rounding = 20;
+            this.kryptonTextBox3.StateCommon.Border.Width = 1;
+            this.kryptonTextBox3.TabIndex = 8;
+            // 
+            // kryptonTextBox4
+            // 
+            this.kryptonTextBox4.Location = new System.Drawing.Point(327, 183);
+            this.kryptonTextBox4.Name = "kryptonTextBox4";
+            this.kryptonTextBox4.PasswordChar = '•';
+            this.kryptonTextBox4.Size = new System.Drawing.Size(436, 43);
+            this.kryptonTextBox4.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonTextBox4.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBox4.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.kryptonTextBox4.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox4.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonTextBox4.StateCommon.Border.Rounding = 20;
+            this.kryptonTextBox4.StateCommon.Border.Width = 1;
+            this.kryptonTextBox4.TabIndex = 9;
+            // 
+            // kryptonTextBox5
+            // 
+            this.kryptonTextBox5.Location = new System.Drawing.Point(327, 243);
+            this.kryptonTextBox5.Name = "kryptonTextBox5";
+            this.kryptonTextBox5.PasswordChar = '•';
+            this.kryptonTextBox5.Size = new System.Drawing.Size(436, 43);
+            this.kryptonTextBox5.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonTextBox5.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBox5.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.kryptonTextBox5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox5.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonTextBox5.StateCommon.Border.Rounding = 20;
+            this.kryptonTextBox5.StateCommon.Border.Width = 1;
+            this.kryptonTextBox5.TabIndex = 10;
+            // 
+            // kryptonTextBox6
+            // 
+            this.kryptonTextBox6.Location = new System.Drawing.Point(327, 303);
+            this.kryptonTextBox6.Name = "kryptonTextBox6";
+            this.kryptonTextBox6.PasswordChar = '•';
+            this.kryptonTextBox6.Size = new System.Drawing.Size(436, 43);
+            this.kryptonTextBox6.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonTextBox6.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBox6.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.kryptonTextBox6.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox6.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonTextBox6.StateCommon.Border.Rounding = 20;
+            this.kryptonTextBox6.StateCommon.Border.Width = 1;
+            this.kryptonTextBox6.TabIndex = 8;
+            // 
+            // kryptonTextBox7
+            // 
+            this.kryptonTextBox7.Location = new System.Drawing.Point(327, 363);
+            this.kryptonTextBox7.Name = "kryptonTextBox7";
+            this.kryptonTextBox7.PasswordChar = '•';
+            this.kryptonTextBox7.Size = new System.Drawing.Size(436, 43);
+            this.kryptonTextBox7.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.kryptonTextBox7.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBox7.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.kryptonTextBox7.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox7.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonTextBox7.StateCommon.Border.Rounding = 20;
+            this.kryptonTextBox7.StateCommon.Border.Width = 1;
+            this.kryptonTextBox7.TabIndex = 11;
+            // 
             // STKmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(1218, 734);
+            this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonTreeView1);
@@ -326,6 +571,9 @@
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "STK údržba vozidel";
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
+            this.kryptonPanel1.ResumeLayout(false);
+            this.kryptonPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -336,5 +584,20 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTreeView kryptonTreeView1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox7;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
     }
 }
