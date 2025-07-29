@@ -16,6 +16,9 @@ namespace STK2
         public STKmain()
         {
             InitializeComponent();
+
+            // Zaoblené rohy pro KryptonPanel1
+           
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
