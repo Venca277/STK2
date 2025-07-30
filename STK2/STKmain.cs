@@ -9,17 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using Microsoft.VisualBasic;
+using System.IO;
 
 namespace STK2
 {
     public partial class STKmain : KryptonForm
     {
-        public STKmain()
+        private string userName;
+        public STKmain(string user)
         {
             InitializeComponent();
-
+            this.userName = user;
             // Zaoblené rohy pro KryptonPanel1
-           
+
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
@@ -52,10 +54,20 @@ namespace STK2
 
             // selected node is not null and is exactly one under the root
             if (kryptonTreeView1.Nodes.Contains(kryptonTreeView1.SelectedNode.Parent)){
-                kryptonTreeView1.SelectedNode.Nodes.Add("temp1");
+
+                //asks user to imput vehicle name
                 string odpoved = Interaction.InputBox("Zadej název vozidla:", "Název - lze změnit později", "např Audi R8");
                 odpoved = string.IsNullOrEmpty(odpoved) ? "temp1" : odpoved;
+                kryptonTreeView1.SelectedNode.Nodes.Add(odpoved);
 
+                //creates JSON file of the vehicle
+                File.Create(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
+                    $"{kryptonTreeView1.SelectedNode.Parent.Name}\\{kryptonTreeView1.SelectedNode.Name}\\", odpoved + ".json")).Close();
+
+                //notifying user about successful addition
+                notifyIcon1.BalloonTipTitle = "Upozornění!";
+                notifyIcon1.BalloonTipText = $"Vozidlo {odpoved} bylo úspěšně vytvořeno!";
+                notifyIcon1.ShowBalloonTip(5000);
 
             }
             // selected node is not allowed to add any subnodes

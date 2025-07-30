@@ -15,26 +15,34 @@ namespace STK2
     public partial class Form1 : KryptonForm
     {
         IniFile config;
+        private string userName = "";
         private string password = "";
         public Form1()
         {
             InitializeComponent();
-            this.config = new IniFile(Path.Combine(Application.StartupPath, "config.ini"));
-            password = config.Read("UserInfo", "Password");
+
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            if(password == kryptonTextBox1.Text)
+            this.config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\{loginTextBox.Text}\\", "config.ini"));
+            if(config == null){
+                MessageBox.Show("Chyba při načítání konfiguračního souboru. Uzivatel neexistuje!", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                return;
+            }
+            password = config.Read("UserInfo", "Password");
+            userName = config.Read("UserInfo", "Username");
+
+            if (password == hesloTextBox.Text && userName == loginTextBox.Text)
             {
                 this.Hide();
-                STKmain stkmain = new STKmain();
+                STKmain stkmain = new STKmain(userName);
                 stkmain.ShowDialog();
                 this.Close();
             }
 
             label2.Text = "Nesprávné heslo!";
-            kryptonTextBox1.Clear();
+            hesloTextBox.Clear();
         }
     }
 }
