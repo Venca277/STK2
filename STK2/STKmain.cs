@@ -21,7 +21,7 @@ namespace STK2
             InitializeComponent();
             this.userName = user;
             // Zaoblené rohy pro KryptonPanel1
-
+            RefreshTreeView();
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
@@ -44,7 +44,8 @@ namespace STK2
         private void pridatButton_Click(object sender, EventArgs e)
         {
             // notify user if no node is selected
-            if (kryptonTreeView1.SelectedNode == null) {
+            if (kryptonTreeView1.SelectedNode == null)
+            {
                 notifyIcon1.BalloonTipTitle = "Upozornění!";
                 notifyIcon1.BalloonTipText = "Vyberte sekci pro Vaše vozidlo!";
                 notifyIcon1.ShowBalloonTip(5000);
@@ -53,7 +54,8 @@ namespace STK2
             }
 
             // selected node is not null and is exactly one under the root
-            if (kryptonTreeView1.Nodes.Contains(kryptonTreeView1.SelectedNode.Parent)){
+            if (kryptonTreeView1.Nodes.Contains(kryptonTreeView1.SelectedNode.Parent))
+            {
 
                 //asks user to imput vehicle name
                 string odpoved = Interaction.InputBox("Zadej název vozidla:", "Název - lze změnit později", "např Audi R8");
@@ -71,7 +73,8 @@ namespace STK2
 
             }
             // selected node is not allowed to add any subnodes
-            else {
+            else
+            {
                 notifyIcon1.BalloonTipTitle = "Upozornění!";
                 notifyIcon1.BalloonTipText = $"Do této sekce ({kryptonTreeView1.SelectedNode.Text}) nezle vložit vozidlo!";
                 notifyIcon1.ShowBalloonTip(5000);
@@ -81,6 +84,26 @@ namespace STK2
         private void odebratButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void RefreshTreeView()
+        {
+            kryptonTreeView1.Nodes.Clear();
+            string[] sekce = Directory.GetDirectories(Path.Combine(Application.StartupPath, "users", userName));
+            foreach (string sekcePath in sekce)
+            {
+                string[] typy = Directory.GetDirectories(sekcePath);
+                foreach (string typ in typy)
+                {
+                    string[] files = Directory.GetFiles(typ, "*.json");
+                    foreach (string file in files)
+                    {
+                        string fileName = Path.GetFileNameWithoutExtension(file);
+                        TreeNode vozidloNode = new TreeNode(fileName);
+                        kryptonTreeView1.Nodes.Add(vozidloNode);
+                    }
+                }
+            }
         }
     }
 }
