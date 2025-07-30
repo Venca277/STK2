@@ -88,7 +88,7 @@ namespace STK2
 
         public void RefreshTreeView()
         {
-            kryptonTreeView1.Nodes.Clear();
+            //kryptonTreeView1.Nodes.Clear();
             string[] sekce = Directory.GetDirectories(Path.Combine(Application.StartupPath, "users", userName));
             foreach (string sekcePath in sekce)
             {
@@ -98,12 +98,36 @@ namespace STK2
                     string[] files = Directory.GetFiles(typ, "*.json");
                     foreach (string file in files)
                     {
-                        string fileName = Path.GetFileNameWithoutExtension(file);
-                        TreeNode vozidloNode = new TreeNode(fileName);
-                        kryptonTreeView1.Nodes.Add(vozidloNode);
+                        AppendNode(file);
                     }
                 }
             }
         }
+
+        public void AppendNode(string filepath)
+        {
+            string fileName = Path.GetFileNameWithoutExtension(filepath);
+            string[] dirs = Path.GetDirectoryName(filepath).Split(Path.DirectorySeparatorChar);
+            string sectionName = dirs[dirs.Length - 2]; // Get the parent directory name
+            string typeName = dirs[dirs.Length - 1]; // Get the current directory name
+
+            foreach(TreeNode root in kryptonTreeView1.Nodes)
+            {
+                if(root.Name != sectionName)
+                    continue;
+
+                foreach (TreeNode typeNode in root.Nodes)
+                {
+                    if (typeNode.Name != typeName)
+                        continue;
+
+                    TreeNode newNode = new TreeNode(fileName);
+                    typeNode.Nodes.Add(newNode);
+                    return; // Exit after adding the node
+                }
+            }
+
+        }
+
     }
 }
