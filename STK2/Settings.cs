@@ -16,6 +16,7 @@ namespace STK2
         public Settings()
         {
             InitializeComponent();
+            zobrazitComboBox.SelectedIndex = 0;
         }
     }
 }

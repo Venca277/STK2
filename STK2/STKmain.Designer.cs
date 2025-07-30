@@ -134,6 +134,7 @@
             this.logoutLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.nastaveniLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zakladni_infoPanel)).BeginInit();
             this.zakladni_infoPanel.SuspendLayout();
@@ -172,39 +173,39 @@
             this.kryptonTreeView1.BorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.InputControlRibbon;
             this.kryptonTreeView1.Location = new System.Drawing.Point(12, 12);
             this.kryptonTreeView1.Name = "kryptonTreeView1";
-            treeNode1.Name = "Uzel0";
+            treeNode1.Name = "osobni";
             treeNode1.Text = "Osobní automobily";
-            treeNode2.Name = "Uzel1";
+            treeNode2.Name = "nakladni";
             treeNode2.Text = "Nákladní automobily";
-            treeNode3.Name = "Uzel2";
+            treeNode3.Name = "motocykly";
             treeNode3.Text = "Motocykly";
-            treeNode4.Name = "Uzel3";
+            treeNode4.Name = "karavany";
             treeNode4.Text = "Karavany a obytná vozidla";
-            treeNode5.Name = "Uzel0";
+            treeNode5.Name = "silnicni_vozidla";
             treeNode5.Text = "Silniční vozidla";
-            treeNode6.Name = "Uzel5";
+            treeNode6.Name = "mala_plavidla";
             treeNode6.Text = "Malá plavidla";
-            treeNode7.Name = "Uzel6";
+            treeNode7.Name = "velka_plavidla";
             treeNode7.Text = "Velká plavidla";
-            treeNode8.Name = "Uzel4";
+            treeNode8.Name = "plavidla";
             treeNode8.Text = "Plavidla";
-            treeNode9.Name = "Uzel8";
+            treeNode9.Name = "mala_letadla";
             treeNode9.Text = "Malá letadla";
-            treeNode10.Name = "Uzel9";
+            treeNode10.Name = "dopravni_letadla";
             treeNode10.Text = "Dopravní letadla";
-            treeNode11.Name = "Uzel10";
+            treeNode11.Name = "vrtulniky";
             treeNode11.Text = "Vrtulníky a helikoptéry";
-            treeNode12.Name = "Uzel7";
+            treeNode12.Name = "letouny";
             treeNode12.Text = "Letouny";
-            treeNode13.Name = "Uzel12";
+            treeNode13.Name = "zemedelska_technika";
             treeNode13.Text = "Zemědělská technika";
-            treeNode14.Name = "Uzel13";
+            treeNode14.Name = "stavebni_technika";
             treeNode14.Text = "Stavební technika";
-            treeNode15.Name = "Uzel14";
+            treeNode15.Name = "vojenska_technika";
             treeNode15.Text = "Vojenská vozidla";
-            treeNode16.Name = "Uzel16";
+            treeNode16.Name = "specialni_technika";
             treeNode16.Text = "Speciální vozidla";
-            treeNode17.Name = "Uzel11";
+            treeNode17.Name = "specialni_vozidla";
             treeNode17.Text = "Speciální a jiná vozidla";
             this.kryptonTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode5,
@@ -309,6 +310,7 @@
             this.pridatButton.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.pridatButton.TabIndex = 3;
             this.pridatButton.Values.Text = "Přidat vozidlo";
+            this.pridatButton.Click += new System.EventHandler(this.pridatButton_Click);
             // 
             // odebratButton
             // 
@@ -397,6 +399,7 @@
             this.odebratButton.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.odebratButton.TabIndex = 4;
             this.odebratButton.Values.Text = "Odebrat vozidlo";
+            this.odebratButton.Click += new System.EventHandler(this.odebratButton_Click);
             // 
             // label1
             // 
@@ -1580,6 +1583,11 @@
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Václav Sovák";
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Visible = true;
+            // 
             // STKmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1706,5 +1714,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel logoutLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel nastaveniLabel;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

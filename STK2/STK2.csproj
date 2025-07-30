@@ -51,6 +51,7 @@
     <Reference Include="ComponentFactory.Krypton.Workspace">
       <HintPath>..\..\..\..\Desktop\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Siticone.Desktop.UI">
       <HintPath>..\..\..\..\.nuget\packages\siticone.desktop.ui\2.1.1\lib\net40\Siticone.Desktop.UI.dll</HintPath>
     </Reference>
