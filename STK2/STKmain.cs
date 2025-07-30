@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using Microsoft.VisualBasic;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace STK2
 {
@@ -54,8 +55,7 @@ namespace STK2
                 kryptonTreeView1.SelectedNode.Nodes.Add(odpoved);
 
                 //creates JSON file of the vehicle
-                File.Create(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
-                    $"{kryptonTreeView1.SelectedNode.Parent.Name}\\{kryptonTreeView1.SelectedNode.Name}\\", odpoved + ".json")).Close();
+                InitializeJSON(odpoved);
 
                 //notifying user about successful addition
                 notifyIcon1.BalloonTipTitle = "Upozornění!";
@@ -172,6 +172,21 @@ namespace STK2
             stav_stkPanel.Visible = false;
             technicke_udajePanel.Visible = false;
             zakladni_infoPanel.Visible = false;
+        }
+        
+        private void InitializeJSON(string odpoved)
+        {
+            VozidloData data = new VozidloData
+            {
+                zakladniInfo = new ZakladniInfo(),
+                stavSTK = new StavSTK(),
+                technickeUdaje = new TechnickeUdaje(),
+                majitel = new Majitel(),
+                nehody = new Nehody()
+            };
+            string json = JsonConvert.SerializeObject(data, Formatting.Indented);
+            File.WriteAllText(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
+                    $"{kryptonTreeView1.SelectedNode.Parent.Name}\\{kryptonTreeView1.SelectedNode.Name}\\", odpoved + ".json"), json);
         }
     }
 }

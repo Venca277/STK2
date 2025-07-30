@@ -50,4 +50,12 @@ namespace STK2
         public string zaznam { get; set; }
         public string poznamkykSTK { get; set; }
     }
+
+    public class VozidloData { 
+        public ZakladniInfo zakladniInfo { get; set; }
+        public StavSTK stavSTK { get; set; }
+        public TechnickeUdaje technickeUdaje { get; set; }
+        public Majitel majitel { get; set; }
+        public Nehody nehody { get; set; }
+    }
 }
