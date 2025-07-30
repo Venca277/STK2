@@ -18,6 +18,8 @@ namespace STK2
     {
         private string userName;
         private int settingsIndex = -1;
+        private VozidloData vozidloData;
+
         public STKmain(string user)
         {
             InitializeComponent();
@@ -161,9 +163,13 @@ namespace STK2
         {
             if (!IsLeaf()) 
                 return;
-
+            TreeNode selectedNode = kryptonTreeView1.SelectedNode;
             //TODO: Load vehicle data from JSON file
+            string json = File.ReadAllText(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
+                    $"{selectedNode.Parent.Parent.Name}\\{selectedNode.Parent.Name}\\", selectedNode.Name + ".json"));
+            vozidloData = JsonConvert.DeserializeObject<VozidloData>(json);
 
+            //TODO : Show vehicle data in the appropriate panel
         }
 
         private void HidePanels() { 
