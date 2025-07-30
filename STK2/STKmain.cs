@@ -16,29 +16,20 @@ namespace STK2
     public partial class STKmain : KryptonForm
     {
         private string userName;
+        private int settingsIndex = -1;
         public STKmain(string user)
         {
             InitializeComponent();
             this.userName = user;
-            // Zaoblené rohy pro KryptonPanel1
+            
             RefreshTreeView();
+            ApplySettings();
+            HidePanels();
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void kryptonComboBox1_Enter(object sender, EventArgs e)
-        {
-            kryptonComboBox1.SelectionStart = kryptonComboBox1.Text.Length;
-            kryptonComboBox1.SelectionLength = 0;
-        }
-
-        private void kryptonComboBox1_Click(object sender, EventArgs e)
-        {
-            kryptonComboBox1.SelectionStart = kryptonComboBox1.Text.Length;
-            kryptonComboBox1.SelectionLength = 0;
         }
 
         private void pridatButton_Click(object sender, EventArgs e)
@@ -83,7 +74,21 @@ namespace STK2
 
         private void odebratButton_Click(object sender, EventArgs e)
         {
+            if (!IsLeaf())
+                return;
 
+            var result = MessageBox.Show("Opravdu odebrat vozidlo?", "Potvrzení odebrání", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == DialogResult.No)
+                return;
+
+            File.Delete(Path.Combine(Application.StartupPath, "users", userName, 
+                kryptonTreeView1.SelectedNode.Parent.Parent.Name, kryptonTreeView1.SelectedNode.Parent.Name, 
+                kryptonTreeView1.SelectedNode.Text + ".json"));
+
+            kryptonTreeView1.SelectedNode.Remove();
+            notifyIcon1.BalloonTipTitle = "Upozornění!";
+            notifyIcon1.BalloonTipText = "Vozidlo bylo odebrano!";
+            notifyIcon1.ShowBalloonTip(5000);
         }
 
         public void RefreshTreeView()
@@ -129,5 +134,44 @@ namespace STK2
 
         }
 
+        public void ApplySettings() { 
+            IniFile config = new IniFile(Path.Combine(Application.StartupPath, "users", userName, "config.ini"));
+            if (config == null)
+            {
+                MessageBox.Show("Chyba při načítání konfiguračního souboru. Uzivatel neexistuje!", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            settingsIndex = Convert.ToInt32(config.Read("Settings", "show"));
+            nameLabel.Text = config.Read("UserInfo", "Name");
+        }
+
+        public bool IsLeaf()
+        {
+            TreeNode node = kryptonTreeView1.SelectedNode;
+            if (kryptonTreeView1.Nodes.Contains(node.Parent))
+                return false;
+
+            if (node.Nodes.Count != 0)
+                return false;
+
+            return true;
+        }
+
+        private void kryptonTreeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if (!IsLeaf()) 
+                return;
+
+            //TODO: Load vehicle data from JSON file
+
+        }
+
+        private void HidePanels() { 
+            majitelPanel.Visible = false;
+            historiePanel.Visible = false;
+            stav_stkPanel.Visible = false;
+            technicke_udajePanel.Visible = false;
+            zakladni_infoPanel.Visible = false;
+        }
     }
 }
