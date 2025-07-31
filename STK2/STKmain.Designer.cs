@@ -29,36 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Osobní automobily");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Nákladní automobily");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Motocykly");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Karavany a obytná vozidla");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Silniční vozidla", new System.Windows.Forms.TreeNode[] {
-            treeNode18,
-            treeNode19,
-            treeNode20,
-            treeNode21});
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Malá plavidla");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Velká plavidla");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Plavidla", new System.Windows.Forms.TreeNode[] {
-            treeNode23,
-            treeNode24});
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Malá letadla");
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Dopravní letadla");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Vrtulníky a helikoptéry");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Letouny", new System.Windows.Forms.TreeNode[] {
-            treeNode26,
-            treeNode27,
-            treeNode28});
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Zemědělská technika");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Stavební technika");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Vojenská vozidla");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Speciální vozidla");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Speciální a jiná vozidla", new System.Windows.Forms.TreeNode[] {
-            treeNode30,
-            treeNode31,
-            treeNode32,
-            treeNode33});
+            System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("Osobní automobily");
+            System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("Nákladní automobily");
+            System.Windows.Forms.TreeNode treeNode88 = new System.Windows.Forms.TreeNode("Motocykly");
+            System.Windows.Forms.TreeNode treeNode89 = new System.Windows.Forms.TreeNode("Karavany a obytná vozidla");
+            System.Windows.Forms.TreeNode treeNode90 = new System.Windows.Forms.TreeNode("Silniční vozidla", new System.Windows.Forms.TreeNode[] {
+            treeNode86,
+            treeNode87,
+            treeNode88,
+            treeNode89});
+            System.Windows.Forms.TreeNode treeNode91 = new System.Windows.Forms.TreeNode("Malá plavidla");
+            System.Windows.Forms.TreeNode treeNode92 = new System.Windows.Forms.TreeNode("Velká plavidla");
+            System.Windows.Forms.TreeNode treeNode93 = new System.Windows.Forms.TreeNode("Plavidla", new System.Windows.Forms.TreeNode[] {
+            treeNode91,
+            treeNode92});
+            System.Windows.Forms.TreeNode treeNode94 = new System.Windows.Forms.TreeNode("Malá letadla");
+            System.Windows.Forms.TreeNode treeNode95 = new System.Windows.Forms.TreeNode("Dopravní letadla");
+            System.Windows.Forms.TreeNode treeNode96 = new System.Windows.Forms.TreeNode("Vrtulníky a helikoptéry");
+            System.Windows.Forms.TreeNode treeNode97 = new System.Windows.Forms.TreeNode("Letouny", new System.Windows.Forms.TreeNode[] {
+            treeNode94,
+            treeNode95,
+            treeNode96});
+            System.Windows.Forms.TreeNode treeNode98 = new System.Windows.Forms.TreeNode("Zemědělská technika");
+            System.Windows.Forms.TreeNode treeNode99 = new System.Windows.Forms.TreeNode("Stavební technika");
+            System.Windows.Forms.TreeNode treeNode100 = new System.Windows.Forms.TreeNode("Vojenská vozidla");
+            System.Windows.Forms.TreeNode treeNode101 = new System.Windows.Forms.TreeNode("Speciální vozidla");
+            System.Windows.Forms.TreeNode treeNode102 = new System.Windows.Forms.TreeNode("Speciální a jiná vozidla", new System.Windows.Forms.TreeNode[] {
+            treeNode98,
+            treeNode99,
+            treeNode100,
+            treeNode101});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(STKmain));
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonTreeView1 = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
@@ -173,45 +173,45 @@
             this.kryptonTreeView1.BorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.InputControlRibbon;
             this.kryptonTreeView1.Location = new System.Drawing.Point(12, 12);
             this.kryptonTreeView1.Name = "kryptonTreeView1";
-            treeNode18.Name = "osobni";
-            treeNode18.Text = "Osobní automobily";
-            treeNode19.Name = "nakladni";
-            treeNode19.Text = "Nákladní automobily";
-            treeNode20.Name = "motocykly";
-            treeNode20.Text = "Motocykly";
-            treeNode21.Name = "karavany";
-            treeNode21.Text = "Karavany a obytná vozidla";
-            treeNode22.Name = "silnicni_vozidla";
-            treeNode22.Text = "Silniční vozidla";
-            treeNode23.Name = "mala_plavidla";
-            treeNode23.Text = "Malá plavidla";
-            treeNode24.Name = "velka_plavidla";
-            treeNode24.Text = "Velká plavidla";
-            treeNode25.Name = "plavidla";
-            treeNode25.Text = "Plavidla";
-            treeNode26.Name = "mala_letadla";
-            treeNode26.Text = "Malá letadla";
-            treeNode27.Name = "dopravni_letadla";
-            treeNode27.Text = "Dopravní letadla";
-            treeNode28.Name = "vrtulniky";
-            treeNode28.Text = "Vrtulníky a helikoptéry";
-            treeNode29.Name = "letouny";
-            treeNode29.Text = "Letouny";
-            treeNode30.Name = "zemedelska_technika";
-            treeNode30.Text = "Zemědělská technika";
-            treeNode31.Name = "stavebni_technika";
-            treeNode31.Text = "Stavební technika";
-            treeNode32.Name = "vojenska_technika";
-            treeNode32.Text = "Vojenská vozidla";
-            treeNode33.Name = "specialni_technika";
-            treeNode33.Text = "Speciální vozidla";
-            treeNode34.Name = "specialni_vozidla";
-            treeNode34.Text = "Speciální a jiná vozidla";
+            treeNode86.Name = "osobni";
+            treeNode86.Text = "Osobní automobily";
+            treeNode87.Name = "nakladni";
+            treeNode87.Text = "Nákladní automobily";
+            treeNode88.Name = "motocykly";
+            treeNode88.Text = "Motocykly";
+            treeNode89.Name = "karavany";
+            treeNode89.Text = "Karavany a obytná vozidla";
+            treeNode90.Name = "silnicni_vozidla";
+            treeNode90.Text = "Silniční vozidla";
+            treeNode91.Name = "mala_plavidla";
+            treeNode91.Text = "Malá plavidla";
+            treeNode92.Name = "velka_plavidla";
+            treeNode92.Text = "Velká plavidla";
+            treeNode93.Name = "plavidla";
+            treeNode93.Text = "Plavidla";
+            treeNode94.Name = "mala_letadla";
+            treeNode94.Text = "Malá letadla";
+            treeNode95.Name = "dopravni_letadla";
+            treeNode95.Text = "Dopravní letadla";
+            treeNode96.Name = "vrtulniky";
+            treeNode96.Text = "Vrtulníky a helikoptéry";
+            treeNode97.Name = "letouny";
+            treeNode97.Text = "Letouny";
+            treeNode98.Name = "zemedelska_technika";
+            treeNode98.Text = "Zemědělská technika";
+            treeNode99.Name = "stavebni_technika";
+            treeNode99.Text = "Stavební technika";
+            treeNode100.Name = "vojenska_technika";
+            treeNode100.Text = "Vojenská vozidla";
+            treeNode101.Name = "specialni_technika";
+            treeNode101.Text = "Speciální vozidla";
+            treeNode102.Name = "specialni_vozidla";
+            treeNode102.Text = "Speciální a jiná vozidla";
             this.kryptonTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode22,
-            treeNode25,
-            treeNode29,
-            treeNode34});
+            treeNode90,
+            treeNode93,
+            treeNode97,
+            treeNode102});
             this.kryptonTreeView1.Palette = this.kryptonPalette1;
             this.kryptonTreeView1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonTreeView1.Size = new System.Drawing.Size(410, 432);
@@ -661,7 +661,7 @@
             this.zakladni_infoPanel.Controls.Add(this.label6);
             this.zakladni_infoPanel.Controls.Add(this.druh_vozidlatxt);
             this.zakladni_infoPanel.Controls.Add(this.spz_rztxt);
-            this.zakladni_infoPanel.Location = new System.Drawing.Point(432, 12);
+            this.zakladni_infoPanel.Location = new System.Drawing.Point(848, 435);
             this.zakladni_infoPanel.Name = "zakladni_infoPanel";
             this.zakladni_infoPanel.Size = new System.Drawing.Size(786, 432);
             this.zakladni_infoPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -873,7 +873,7 @@
             this.stav_stkPanel.Controls.Add(this.label13);
             this.stav_stkPanel.Controls.Add(this.label14);
             this.stav_stkPanel.Controls.Add(this.platnostEKTextBox);
-            this.stav_stkPanel.Location = new System.Drawing.Point(0, 0);
+            this.stav_stkPanel.Location = new System.Drawing.Point(31, 540);
             this.stav_stkPanel.Name = "stav_stkPanel";
             this.stav_stkPanel.Size = new System.Drawing.Size(786, 432);
             this.stav_stkPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1309,6 +1309,7 @@
             // majitelPanel
             // 
             this.majitelPanel.Controls.Add(this.label24);
+            this.majitelPanel.Controls.Add(this.historiePanel);
             this.majitelPanel.Controls.Add(this.label25);
             this.majitelPanel.Controls.Add(this.poznamky_vlastnikBox);
             this.majitelPanel.Controls.Add(this.vlastnikTextBox);
@@ -1443,11 +1444,10 @@
             this.historiePanel.Controls.Add(this.label26);
             this.historiePanel.Controls.Add(this.zaznamyTextBox);
             this.historiePanel.Controls.Add(this.label32);
-            this.historiePanel.Controls.Add(this.stav_stkPanel);
             this.historiePanel.Controls.Add(this.label33);
             this.historiePanel.Controls.Add(this.poznamkySTKTextBox);
             this.historiePanel.Controls.Add(this.vlastnictviTextBox);
-            this.historiePanel.Location = new System.Drawing.Point(432, 12);
+            this.historiePanel.Location = new System.Drawing.Point(0, 0);
             this.historiePanel.Name = "historiePanel";
             this.historiePanel.Size = new System.Drawing.Size(786, 432);
             this.historiePanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1594,8 +1594,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(1218, 734);
             this.Controls.Add(this.gradientPanel1);
-            this.Controls.Add(this.historiePanel);
             this.Controls.Add(this.majitelPanel);
+            this.Controls.Add(this.stav_stkPanel);
             this.Controls.Add(this.technicke_udajePanel);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.backButton);

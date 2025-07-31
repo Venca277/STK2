@@ -22,8 +22,8 @@ namespace STK2
         public DateTime posledniSTK { get; set; }
         public DateTime platnostSTK { get; set; }
         public DateTime platnostEmise { get; set; }
-        public string vysledekSTK { get; set; }
-        public string vysledekEmise { get; set; }
+        public bool vysledekSTK { get; set; }
+        public bool vysledekEmise { get; set; }
         public string poznamka { get; set; }
 
     }

@@ -170,6 +170,7 @@ namespace STK2
             vozidloData = JsonConvert.DeserializeObject<VozidloData>(json);
 
             //TODO : Show vehicle data in the appropriate panel
+
         }
 
         private void HidePanels() { 
@@ -193,6 +194,74 @@ namespace STK2
             string json = JsonConvert.SerializeObject(data, Formatting.Indented);
             File.WriteAllText(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
                     $"{kryptonTreeView1.SelectedNode.Parent.Name}\\{kryptonTreeView1.SelectedNode.Name}\\", odpoved + ".json"), json);
+        }
+
+        private void LoadPanelData()
+        {
+
+
+
+
+
+
+
+
+
+        }
+
+        public void LoadPanel1() {
+            //---------Panel 1---------------
+            znacka_modeltxt.Text = vozidloData.zakladniInfo.znacka;
+            druh_vozidlatxt.Text = vozidloData.zakladniInfo.druh;
+            spz_rztxt.Text = vozidloData.zakladniInfo.spz;
+            vintxt.Text = vozidloData.zakladniInfo.vin;
+            registracetxt.Text = vozidloData.zakladniInfo.prvni_registrace.ToLongDateString();
+            typ_variantatxt.Text = vozidloData.zakladniInfo.typ;
+            barva_karoserietxt.Text = vozidloData.zakladniInfo.barva;
+            //-------------------------------
+        }
+        public void LoadPanel2()
+        {
+            //---------Panel 2---------------
+            platnostSTKTextBox.Text = vozidloData.stavSTK.platnostSTK.ToLongDateString();
+            platnostEKTextBox.Text = vozidloData.stavSTK.platnostEmise.ToLongDateString();
+            if (vozidloData.stavSTK.vysledekSTK) { vysledekSTKPanel.BackColor = Color.LimeGreen; label15.Text = "Platná"; }
+            else { vysledekSTKPanel.BackColor = Color.Crimson; label15.Text = "Neplatná"; }
+            if (vozidloData.stavSTK.vysledekEmise) { vysledekEKPanel.BackColor = Color.LimeGreen; label16.Text = "Platná"; }
+            else { vysledekEKPanel.BackColor = Color.Crimson; label16.Text = "Neplatná"; }
+            typSTKTextBox.Text = vozidloData.stavSTK.typSTK;
+            posledniSTKTextBox.Text = vozidloData.stavSTK.posledniSTK.ToLongDateString();
+            poznamkyTextBox.Text = vozidloData.stavSTK.poznamka;
+            //-------------------------------
+        }
+        public void LoadPanel3()
+        {
+            //---------Panel 3---------------
+            vykonTextBox.Text = vozidloData.technickeUdaje.vykon.ToString();
+            palivoTextBox.Text = vozidloData.technickeUdaje.palivo;
+            pohonTextBox.Text = vozidloData.technickeUdaje.pohon;
+            hmotnostTextBox.Text = vozidloData.technickeUdaje.hmotnost.ToString();
+            mistaTextBox.Text = vozidloData.technickeUdaje.pocetMist.ToString();
+            pneuTextBox.Text = vozidloData.technickeUdaje.pneumatiky;
+            rozmeryTextBox.Text = vozidloData.technickeUdaje.rozmery;
+            //-------------------------------
+        }
+        public void LoadPanel4()
+        {
+            //---------Panel 4---------------
+            vlastnikTextBox.Text = vozidloData.majitel.jmeno_vlastnik;
+            provozovatelTextBox.Text = vozidloData.majitel.provozovatel;
+            kontaktTextBox.Text = vozidloData.majitel.kontakt;
+            poznamky_vlastnikBox.Text = vozidloData.majitel.poznamky;
+            //-------------------------------
+        }
+        public void LoadPanel5()
+        {
+            //---------Panel 5---------------
+            zaznamyTextBox.Text = vozidloData.nehody.zaznam;
+            poznamkySTKTextBox.Text = vozidloData.nehody.poznamkykSTK;
+            vlastnictviTextBox.Text = vozidloData.majitel.zmena_vlastnictvi;
+            //-------------------------------
         }
     }
 }
