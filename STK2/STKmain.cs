@@ -298,6 +298,8 @@ namespace STK2
         private void nextButton_Click(object sender, EventArgs e)
         {
             HidePanels();
+            if(currentPanel == -1)
+                return;
             currentPanel = (currentPanel+1) > 5 ? 1 : currentPanel + 1;
             UpdatePanel();
         }
@@ -305,6 +307,8 @@ namespace STK2
         private void backButton_Click(object sender, EventArgs e)
         {
             HidePanels();
+            if (currentPanel == -1)
+                return;
             currentPanel = (currentPanel - 1) < 1 ? 5 : currentPanel - 1;
             UpdatePanel();
         }
