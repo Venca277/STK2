@@ -32,18 +32,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.gradientPanel1 = new GradientPanel();
-            this.gradientPanel3 = new GradientPanel();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLinkLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.gradientPanel3 = new GradientPanel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.zobrazitComboBox = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.zmenitButton = new ComponentFactory.Krypton.Toolkit.KryptonColorButton();
             this.autologCheckBox = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.email_pripominkaCheckBox = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.sifrovaniCheckBox = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.ulozitButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.stornoButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zobrazitComboBox)).BeginInit();
             this.SuspendLayout();
@@ -75,15 +75,14 @@
             this.gradientPanel1.Size = new System.Drawing.Size(554, 155);
             this.gradientPanel1.TabIndex = 0;
             // 
-            // gradientPanel3
+            // kryptonLinkLabel2
             // 
-            this.gradientPanel3.Angle = -90F;
-            this.gradientPanel3.Color1 = System.Drawing.Color.RoyalBlue;
-            this.gradientPanel3.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.gradientPanel3.Location = new System.Drawing.Point(-7, 568);
-            this.gradientPanel3.Name = "gradientPanel3";
-            this.gradientPanel3.Size = new System.Drawing.Size(554, 155);
-            this.gradientPanel3.TabIndex = 1;
+            this.kryptonLinkLabel2.Location = new System.Drawing.Point(121, 105);
+            this.kryptonLinkLabel2.Name = "kryptonLinkLabel2";
+            this.kryptonLinkLabel2.Size = new System.Drawing.Size(180, 33);
+            this.kryptonLinkLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kryptonLinkLabel2.TabIndex = 3;
+            this.kryptonLinkLabel2.Values.Text = "sovak@tiscali.cz";
             // 
             // kryptonLabel1
             // 
@@ -94,14 +93,15 @@
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "pan Václav Sovák";
             // 
-            // kryptonLinkLabel2
+            // gradientPanel3
             // 
-            this.kryptonLinkLabel2.Location = new System.Drawing.Point(121, 105);
-            this.kryptonLinkLabel2.Name = "kryptonLinkLabel2";
-            this.kryptonLinkLabel2.Size = new System.Drawing.Size(180, 33);
-            this.kryptonLinkLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.kryptonLinkLabel2.TabIndex = 3;
-            this.kryptonLinkLabel2.Values.Text = "sovak@tiscali.cz";
+            this.gradientPanel3.Angle = -90F;
+            this.gradientPanel3.Color1 = System.Drawing.Color.RoyalBlue;
+            this.gradientPanel3.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.gradientPanel3.Location = new System.Drawing.Point(-7, 596);
+            this.gradientPanel3.Name = "gradientPanel3";
+            this.gradientPanel3.Size = new System.Drawing.Size(554, 127);
+            this.gradientPanel3.TabIndex = 1;
             // 
             // kryptonLabel2
             // 
@@ -125,7 +125,7 @@
             "Majitel a provozovatel",
             "Kontroly, zásahy a nehody"});
             this.zobrazitComboBox.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
-            this.zobrazitComboBox.Location = new System.Drawing.Point(182, 406);
+            this.zobrazitComboBox.Location = new System.Drawing.Point(172, 411);
             this.zobrazitComboBox.Name = "zobrazitComboBox";
             this.zobrazitComboBox.Size = new System.Drawing.Size(344, 48);
             this.zobrazitComboBox.StateActive.ComboBox.Back.Color1 = System.Drawing.Color.White;
@@ -157,14 +157,6 @@
             this.zobrazitComboBox.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.zobrazitComboBox.StateCommon.Item.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.zobrazitComboBox.TabIndex = 7;
-            // 
-            // zmenitButton
-            // 
-            this.zmenitButton.Location = new System.Drawing.Point(156, 182);
-            this.zmenitButton.Name = "zmenitButton";
-            this.zmenitButton.Size = new System.Drawing.Size(156, 33);
-            this.zmenitButton.TabIndex = 8;
-            this.zmenitButton.Values.Text = "Změnit";
             // 
             // autologCheckBox
             // 
@@ -201,7 +193,7 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(12, 410);
+            this.kryptonLabel3.Location = new System.Drawing.Point(2, 426);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(164, 33);
             this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -212,7 +204,7 @@
             // 
             this.ulozitButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ulozitButton.CausesValidation = false;
-            this.ulozitButton.Location = new System.Drawing.Point(27, 478);
+            this.ulozitButton.Location = new System.Drawing.Point(27, 501);
             this.ulozitButton.Name = "ulozitButton";
             this.ulozitButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(221)))), ((int)(((byte)(119)))));
             this.ulozitButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
@@ -300,12 +292,13 @@
             this.ulozitButton.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ulozitButton.TabIndex = 13;
             this.ulozitButton.Values.Text = "Uložit nastavení";
+            this.ulozitButton.Click += new System.EventHandler(this.ulozitButton_Click);
             // 
             // stornoButton
             // 
             this.stornoButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.stornoButton.CausesValidation = false;
-            this.stornoButton.Location = new System.Drawing.Point(288, 478);
+            this.stornoButton.Location = new System.Drawing.Point(288, 501);
             this.stornoButton.Name = "stornoButton";
             this.stornoButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.stornoButton.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
@@ -388,6 +381,20 @@
             this.stornoButton.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.stornoButton.TabIndex = 14;
             this.stornoButton.Values.Text = "Storno";
+            this.stornoButton.Click += new System.EventHandler(this.stornoButton_Click);
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(156, 174);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(173, 51);
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateCommon.Border.Rounding = 10;
+            this.kryptonButton1.TabIndex = 15;
+            this.kryptonButton1.Values.Text = "Změnit";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // Settings
             // 
@@ -395,13 +402,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(538, 719);
+            this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.stornoButton);
             this.Controls.Add(this.ulozitButton);
             this.Controls.Add(this.kryptonLabel3);
             this.Controls.Add(this.sifrovaniCheckBox);
             this.Controls.Add(this.email_pripominkaCheckBox);
             this.Controls.Add(this.autologCheckBox);
-            this.Controls.Add(this.zmenitButton);
             this.Controls.Add(this.zobrazitComboBox);
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.gradientPanel3);
@@ -428,12 +435,12 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel kryptonLinkLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox zobrazitComboBox;
-        private ComponentFactory.Krypton.Toolkit.KryptonColorButton zmenitButton;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox autologCheckBox;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox email_pripominkaCheckBox;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox sifrovaniCheckBox;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton ulozitButton;
         private ComponentFactory.Krypton.Toolkit.KryptonButton stornoButton;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }

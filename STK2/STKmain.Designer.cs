@@ -29,36 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Osobní automobily");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Nákladní automobily");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Motocykly");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Karavany a obytná vozidla");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Silniční vozidla", new System.Windows.Forms.TreeNode[] {
-            treeNode18,
-            treeNode19,
-            treeNode20,
-            treeNode21});
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Malá plavidla");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Velká plavidla");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Plavidla", new System.Windows.Forms.TreeNode[] {
-            treeNode23,
-            treeNode24});
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Malá letadla");
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Dopravní letadla");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Vrtulníky a helikoptéry");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Letouny", new System.Windows.Forms.TreeNode[] {
-            treeNode26,
-            treeNode27,
-            treeNode28});
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Zemědělská technika");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Stavební technika");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Vojenská vozidla");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Speciální vozidla");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Speciální a jiná vozidla", new System.Windows.Forms.TreeNode[] {
-            treeNode30,
-            treeNode31,
-            treeNode32,
-            treeNode33});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Osobní automobily");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Nákladní automobily");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Motocykly");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Karavany a obytná vozidla");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Silniční vozidla", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Malá plavidla");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Velká plavidla");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Plavidla", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Malá letadla");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Dopravní letadla");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Vrtulníky a helikoptéry");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Letouny", new System.Windows.Forms.TreeNode[] {
+            treeNode9,
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Zemědělská technika");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Stavební technika");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Vojenská vozidla");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Speciální vozidla");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Speciální a jiná vozidla", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14,
+            treeNode15,
+            treeNode16});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(STKmain));
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonTreeView1 = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
@@ -93,13 +93,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.typSTKTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.posledniSTKTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.platnostSTKTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.platnostEKTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.majitelPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -121,7 +118,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.registracetxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.typ_variantatxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.vintxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.znacka_modeltxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -131,6 +127,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.druh_vozidlatxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.spz_rztxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.ulozitLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
+            this.posledniSTKDateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.registraceDateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.platnostSTKDateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.platnostEKDateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.gradientPanel1 = new GradientPanel();
             this.logoutLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.nastaveniLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
@@ -173,45 +174,45 @@
             this.kryptonTreeView1.BorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.InputControlRibbon;
             this.kryptonTreeView1.Location = new System.Drawing.Point(12, 12);
             this.kryptonTreeView1.Name = "kryptonTreeView1";
-            treeNode18.Name = "osobni";
-            treeNode18.Text = "Osobní automobily";
-            treeNode19.Name = "nakladni";
-            treeNode19.Text = "Nákladní automobily";
-            treeNode20.Name = "motocykly";
-            treeNode20.Text = "Motocykly";
-            treeNode21.Name = "karavany";
-            treeNode21.Text = "Karavany a obytná vozidla";
-            treeNode22.Name = "silnicni_vozidla";
-            treeNode22.Text = "Silniční vozidla";
-            treeNode23.Name = "mala_plavidla";
-            treeNode23.Text = "Malá plavidla";
-            treeNode24.Name = "velka_plavidla";
-            treeNode24.Text = "Velká plavidla";
-            treeNode25.Name = "plavidla";
-            treeNode25.Text = "Plavidla";
-            treeNode26.Name = "mala_letadla";
-            treeNode26.Text = "Malá letadla";
-            treeNode27.Name = "dopravni_letadla";
-            treeNode27.Text = "Dopravní letadla";
-            treeNode28.Name = "vrtulniky";
-            treeNode28.Text = "Vrtulníky a helikoptéry";
-            treeNode29.Name = "letouny";
-            treeNode29.Text = "Letouny";
-            treeNode30.Name = "zemedelska_technika";
-            treeNode30.Text = "Zemědělská technika";
-            treeNode31.Name = "stavebni_technika";
-            treeNode31.Text = "Stavební technika";
-            treeNode32.Name = "vojenska_technika";
-            treeNode32.Text = "Vojenská vozidla";
-            treeNode33.Name = "specialni_technika";
-            treeNode33.Text = "Speciální vozidla";
-            treeNode34.Name = "specialni_vozidla";
-            treeNode34.Text = "Speciální a jiná vozidla";
+            treeNode1.Name = "osobni";
+            treeNode1.Text = "Osobní automobily";
+            treeNode2.Name = "nakladni";
+            treeNode2.Text = "Nákladní automobily";
+            treeNode3.Name = "motocykly";
+            treeNode3.Text = "Motocykly";
+            treeNode4.Name = "karavany";
+            treeNode4.Text = "Karavany a obytná vozidla";
+            treeNode5.Name = "silnicni_vozidla";
+            treeNode5.Text = "Silniční vozidla";
+            treeNode6.Name = "mala_plavidla";
+            treeNode6.Text = "Malá plavidla";
+            treeNode7.Name = "velka_plavidla";
+            treeNode7.Text = "Velká plavidla";
+            treeNode8.Name = "plavidla";
+            treeNode8.Text = "Plavidla";
+            treeNode9.Name = "mala_letadla";
+            treeNode9.Text = "Malá letadla";
+            treeNode10.Name = "dopravni_letadla";
+            treeNode10.Text = "Dopravní letadla";
+            treeNode11.Name = "vrtulniky";
+            treeNode11.Text = "Vrtulníky a helikoptéry";
+            treeNode12.Name = "letouny";
+            treeNode12.Text = "Letouny";
+            treeNode13.Name = "zemedelska_technika";
+            treeNode13.Text = "Zemědělská technika";
+            treeNode14.Name = "stavebni_technika";
+            treeNode14.Text = "Stavební technika";
+            treeNode15.Name = "vojenska_technika";
+            treeNode15.Text = "Vojenská vozidla";
+            treeNode16.Name = "specialni_technika";
+            treeNode16.Text = "Speciální vozidla";
+            treeNode17.Name = "specialni_vozidla";
+            treeNode17.Text = "Speciální a jiná vozidla";
             this.kryptonTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode22,
-            treeNode25,
-            treeNode29,
-            treeNode34});
+            treeNode5,
+            treeNode8,
+            treeNode12,
+            treeNode17});
             this.kryptonTreeView1.Palette = this.kryptonPalette1;
             this.kryptonTreeView1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonTreeView1.Size = new System.Drawing.Size(410, 432);
@@ -659,7 +660,7 @@
             this.technicke_udajePanel.Controls.Add(this.label23);
             this.technicke_udajePanel.Controls.Add(this.palivoTextBox);
             this.technicke_udajePanel.Controls.Add(this.pohonTextBox);
-            this.technicke_udajePanel.Location = new System.Drawing.Point(1201, 9);
+            this.technicke_udajePanel.Location = new System.Drawing.Point(1205, 12);
             this.technicke_udajePanel.Name = "technicke_udajePanel";
             this.technicke_udajePanel.Size = new System.Drawing.Size(786, 432);
             this.technicke_udajePanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -865,6 +866,9 @@
             // 
             // stav_stkPanel
             // 
+            this.stav_stkPanel.Controls.Add(this.platnostEKDateTimePicker);
+            this.stav_stkPanel.Controls.Add(this.platnostSTKDateTimePicker);
+            this.stav_stkPanel.Controls.Add(this.posledniSTKDateTimePicker);
             this.stav_stkPanel.Controls.Add(this.vysledekEKPanel);
             this.stav_stkPanel.Controls.Add(this.vysledekSTKPanel);
             this.stav_stkPanel.Controls.Add(this.poznamkyTextBox);
@@ -872,14 +876,11 @@
             this.stav_stkPanel.Controls.Add(this.label9);
             this.stav_stkPanel.Controls.Add(this.label10);
             this.stav_stkPanel.Controls.Add(this.typSTKTextBox);
-            this.stav_stkPanel.Controls.Add(this.posledniSTKTextBox);
-            this.stav_stkPanel.Controls.Add(this.platnostSTKTextBox);
             this.stav_stkPanel.Controls.Add(this.label11);
             this.stav_stkPanel.Controls.Add(this.label12);
             this.stav_stkPanel.Controls.Add(this.label13);
             this.stav_stkPanel.Controls.Add(this.label14);
-            this.stav_stkPanel.Controls.Add(this.platnostEKTextBox);
-            this.stav_stkPanel.Location = new System.Drawing.Point(1175, 24);
+            this.stav_stkPanel.Location = new System.Drawing.Point(1179, 42);
             this.stav_stkPanel.Name = "stav_stkPanel";
             this.stav_stkPanel.Size = new System.Drawing.Size(786, 432);
             this.stav_stkPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -996,38 +997,6 @@
             this.typSTKTextBox.StateCommon.Border.Width = 1;
             this.typSTKTextBox.TabIndex = 10;
             // 
-            // posledniSTKTextBox
-            // 
-            this.posledniSTKTextBox.Location = new System.Drawing.Point(324, 254);
-            this.posledniSTKTextBox.Name = "posledniSTKTextBox";
-            this.posledniSTKTextBox.Size = new System.Drawing.Size(436, 43);
-            this.posledniSTKTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.posledniSTKTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.posledniSTKTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.posledniSTKTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.posledniSTKTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.posledniSTKTextBox.StateCommon.Border.Rounding = 20;
-            this.posledniSTKTextBox.StateCommon.Border.Width = 1;
-            this.posledniSTKTextBox.TabIndex = 8;
-            // 
-            // platnostSTKTextBox
-            // 
-            this.platnostSTKTextBox.Location = new System.Drawing.Point(324, 15);
-            this.platnostSTKTextBox.Name = "platnostSTKTextBox";
-            this.platnostSTKTextBox.Size = new System.Drawing.Size(436, 43);
-            this.platnostSTKTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.platnostSTKTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.platnostSTKTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.platnostSTKTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.platnostSTKTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.platnostSTKTextBox.StateCommon.Border.Rounding = 20;
-            this.platnostSTKTextBox.StateCommon.Border.Width = 1;
-            this.platnostSTKTextBox.TabIndex = 7;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1076,22 +1045,6 @@
             this.label14.TabIndex = 5;
             this.label14.Text = "Datum poslední STK:";
             // 
-            // platnostEKTextBox
-            // 
-            this.platnostEKTextBox.Location = new System.Drawing.Point(324, 75);
-            this.platnostEKTextBox.Name = "platnostEKTextBox";
-            this.platnostEKTextBox.Size = new System.Drawing.Size(436, 43);
-            this.platnostEKTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.platnostEKTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.platnostEKTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.platnostEKTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.platnostEKTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.platnostEKTextBox.StateCommon.Border.Rounding = 20;
-            this.platnostEKTextBox.StateCommon.Border.Width = 1;
-            this.platnostEKTextBox.TabIndex = 8;
-            // 
             // majitelPanel
             // 
             this.majitelPanel.Controls.Add(this.label24);
@@ -1102,7 +1055,7 @@
             this.majitelPanel.Controls.Add(this.label29);
             this.majitelPanel.Controls.Add(this.provozovatelTextBox);
             this.majitelPanel.Controls.Add(this.kontaktTextBox);
-            this.majitelPanel.Location = new System.Drawing.Point(1158, 46);
+            this.majitelPanel.Location = new System.Drawing.Point(1165, 64);
             this.majitelPanel.Name = "majitelPanel";
             this.majitelPanel.Size = new System.Drawing.Size(786, 432);
             this.majitelPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1232,7 +1185,7 @@
             this.historiePanel.Controls.Add(this.label33);
             this.historiePanel.Controls.Add(this.poznamkySTKTextBox);
             this.historiePanel.Controls.Add(this.vlastnictviTextBox);
-            this.historiePanel.Location = new System.Drawing.Point(432, 12);
+            this.historiePanel.Location = new System.Drawing.Point(1153, 94);
             this.historiePanel.Name = "historiePanel";
             this.historiePanel.Size = new System.Drawing.Size(786, 432);
             this.historiePanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1329,11 +1282,11 @@
             // 
             // zakladni_infoPanel
             // 
+            this.zakladni_infoPanel.Controls.Add(this.registraceDateTimePicker);
             this.zakladni_infoPanel.Controls.Add(this.barva_karoserietxt);
             this.zakladni_infoPanel.Controls.Add(this.label1);
             this.zakladni_infoPanel.Controls.Add(this.label4);
             this.zakladni_infoPanel.Controls.Add(this.label7);
-            this.zakladni_infoPanel.Controls.Add(this.registracetxt);
             this.zakladni_infoPanel.Controls.Add(this.typ_variantatxt);
             this.zakladni_infoPanel.Controls.Add(this.vintxt);
             this.zakladni_infoPanel.Controls.Add(this.znacka_modeltxt);
@@ -1343,7 +1296,7 @@
             this.zakladni_infoPanel.Controls.Add(this.label6);
             this.zakladni_infoPanel.Controls.Add(this.druh_vozidlatxt);
             this.zakladni_infoPanel.Controls.Add(this.spz_rztxt);
-            this.zakladni_infoPanel.Location = new System.Drawing.Point(1132, 74);
+            this.zakladni_infoPanel.Location = new System.Drawing.Point(1191, 27);
             this.zakladni_infoPanel.Name = "zakladni_infoPanel";
             this.zakladni_infoPanel.Size = new System.Drawing.Size(786, 432);
             this.zakladni_infoPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1402,22 +1355,6 @@
             this.label7.Size = new System.Drawing.Size(202, 36);
             this.label7.TabIndex = 6;
             this.label7.Text = "Barva karoserie: ";
-            // 
-            // registracetxt
-            // 
-            this.registracetxt.Location = new System.Drawing.Point(324, 255);
-            this.registracetxt.Name = "registracetxt";
-            this.registracetxt.Size = new System.Drawing.Size(436, 43);
-            this.registracetxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.registracetxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.registracetxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.registracetxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.registracetxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.registracetxt.StateCommon.Border.Rounding = 20;
-            this.registracetxt.StateCommon.Border.Width = 1;
-            this.registracetxt.TabIndex = 10;
             // 
             // typ_variantatxt
             // 
@@ -1548,6 +1485,75 @@
             this.spz_rztxt.StateCommon.Border.Width = 1;
             this.spz_rztxt.TabIndex = 8;
             // 
+            // ulozitLabel
+            // 
+            this.ulozitLabel.Location = new System.Drawing.Point(756, 521);
+            this.ulozitLabel.Name = "ulozitLabel";
+            this.ulozitLabel.Size = new System.Drawing.Size(118, 29);
+            this.ulozitLabel.TabIndex = 16;
+            this.ulozitLabel.Values.Text = "Uložit změny";
+            this.ulozitLabel.LinkClicked += new System.EventHandler(this.ulozitLabel_LinkClicked);
+            // 
+            // posledniSTKDateTimePicker
+            // 
+            this.posledniSTKDateTimePicker.Location = new System.Drawing.Point(324, 255);
+            this.posledniSTKDateTimePicker.Name = "posledniSTKDateTimePicker";
+            this.posledniSTKDateTimePicker.Size = new System.Drawing.Size(436, 42);
+            this.posledniSTKDateTimePicker.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.posledniSTKDateTimePicker.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.posledniSTKDateTimePicker.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.posledniSTKDateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.posledniSTKDateTimePicker.StateCommon.Border.Rounding = 20;
+            this.posledniSTKDateTimePicker.StateCommon.Border.Width = 1;
+            this.posledniSTKDateTimePicker.TabIndex = 17;
+            // 
+            // registraceDateTimePicker
+            // 
+            this.registraceDateTimePicker.Location = new System.Drawing.Point(324, 255);
+            this.registraceDateTimePicker.Name = "registraceDateTimePicker";
+            this.registraceDateTimePicker.Size = new System.Drawing.Size(436, 42);
+            this.registraceDateTimePicker.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.registraceDateTimePicker.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.registraceDateTimePicker.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.registraceDateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.registraceDateTimePicker.StateCommon.Border.Rounding = 20;
+            this.registraceDateTimePicker.StateCommon.Border.Width = 1;
+            this.registraceDateTimePicker.TabIndex = 18;
+            // 
+            // platnostSTKDateTimePicker
+            // 
+            this.platnostSTKDateTimePicker.Location = new System.Drawing.Point(324, 16);
+            this.platnostSTKDateTimePicker.Name = "platnostSTKDateTimePicker";
+            this.platnostSTKDateTimePicker.Size = new System.Drawing.Size(436, 42);
+            this.platnostSTKDateTimePicker.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.platnostSTKDateTimePicker.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.platnostSTKDateTimePicker.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.platnostSTKDateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.platnostSTKDateTimePicker.StateCommon.Border.Rounding = 20;
+            this.platnostSTKDateTimePicker.StateCommon.Border.Width = 1;
+            this.platnostSTKDateTimePicker.TabIndex = 18;
+            // 
+            // platnostEKDateTimePicker
+            // 
+            this.platnostEKDateTimePicker.Location = new System.Drawing.Point(324, 76);
+            this.platnostEKDateTimePicker.Name = "platnostEKDateTimePicker";
+            this.platnostEKDateTimePicker.Size = new System.Drawing.Size(436, 42);
+            this.platnostEKDateTimePicker.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.platnostEKDateTimePicker.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.platnostEKDateTimePicker.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.platnostEKDateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.platnostEKDateTimePicker.StateCommon.Border.Rounding = 20;
+            this.platnostEKDateTimePicker.StateCommon.Border.Width = 1;
+            this.platnostEKDateTimePicker.TabIndex = 19;
+            // 
             // gradientPanel1
             // 
             this.gradientPanel1.Angle = 90F;
@@ -1596,6 +1602,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(1218, 734);
+            this.Controls.Add(this.ulozitLabel);
             this.Controls.Add(this.gradientPanel1);
             this.Controls.Add(this.historiePanel);
             this.Controls.Add(this.majitelPanel);
@@ -1638,6 +1645,7 @@
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1658,7 +1666,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox typ_variantatxt;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox spz_rztxt;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox vintxt;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox registracetxt;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox druh_vozidlatxt;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox znacka_modeltxt;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
@@ -1671,13 +1678,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox typSTKTextBox;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox posledniSTKTextBox;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox platnostSTKTextBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox platnostEKTextBox;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel vysledekSTKPanel;
         private System.Windows.Forms.Label label15;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel vysledekEKPanel;
@@ -1718,5 +1722,10 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel logoutLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel nastaveniLabel;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel ulozitLabel;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker posledniSTKDateTimePicker;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker registraceDateTimePicker;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker platnostEKDateTimePicker;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker platnostSTKDateTimePicker;
     }
 }

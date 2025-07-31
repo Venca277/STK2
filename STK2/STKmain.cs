@@ -152,6 +152,9 @@ namespace STK2
         public bool IsLeaf()
         {
             TreeNode node = kryptonTreeView1.SelectedNode;
+            if (node == null)
+                return false;
+
             if (kryptonTreeView1.Nodes.Contains(node.Parent))
                 return false;
 
@@ -235,7 +238,8 @@ namespace STK2
             druh_vozidlatxt.Text = vozidloData.zakladniInfo.druh;
             spz_rztxt.Text = vozidloData.zakladniInfo.spz;
             vintxt.Text = vozidloData.zakladniInfo.vin;
-            registracetxt.Text = vozidloData.zakladniInfo.prvni_registrace.ToLongDateString();
+            var reg = vozidloData.zakladniInfo.prvni_registrace;
+            registraceDateTimePicker.Value = (reg > registraceDateTimePicker.MinDate && reg < registraceDateTimePicker.MaxDate) ? reg : DateTime.Now;
             typ_variantatxt.Text = vozidloData.zakladniInfo.typ;
             barva_karoserietxt.Text = vozidloData.zakladniInfo.barva;
             //-------------------------------
@@ -243,14 +247,17 @@ namespace STK2
         public void LoadPanel2()
         {
             //---------Panel 2---------------
-            platnostSTKTextBox.Text = vozidloData.stavSTK.platnostSTK.ToLongDateString();
-            platnostEKTextBox.Text = vozidloData.stavSTK.platnostEmise.ToLongDateString();
+            var platSTK = vozidloData.stavSTK.platnostSTK;
+            platnostSTKDateTimePicker.Value = (platSTK > platnostSTKDateTimePicker.MinDate && platSTK < platnostSTKDateTimePicker.MaxDate) ? platSTK : DateTime.Now;
+            var platEK = vozidloData.stavSTK.platnostEmise;
+            platnostEKDateTimePicker.Value = (platEK > platnostEKDateTimePicker.MinDate && platEK < platnostEKDateTimePicker.MaxDate) ? platEK : DateTime.Now;
             if (vozidloData.stavSTK.vysledekSTK) { vysledekSTKPanel.BackColor = Color.LimeGreen; label15.Text = "Platná"; }
             else { vysledekSTKPanel.BackColor = Color.Crimson; label15.Text = "Neplatná"; }
             if (vozidloData.stavSTK.vysledekEmise) { vysledekEKPanel.BackColor = Color.LimeGreen; label16.Text = "Platná"; }
             else { vysledekEKPanel.BackColor = Color.Crimson; label16.Text = "Neplatná"; }
             typSTKTextBox.Text = vozidloData.stavSTK.typSTK;
-            posledniSTKTextBox.Text = vozidloData.stavSTK.posledniSTK.ToLongDateString();
+            var poslSTK = vozidloData.stavSTK.posledniSTK;
+            posledniSTKDateTimePicker.Value = (poslSTK > posledniSTKDateTimePicker.MinDate && poslSTK < posledniSTKDateTimePicker.MaxDate) ? poslSTK : DateTime.Now;
             poznamkyTextBox.Text = vozidloData.stavSTK.poznamka;
             //-------------------------------
         }
@@ -286,7 +293,7 @@ namespace STK2
 
         private void nastaveniLabel_LinkClicked(object sender, EventArgs e)
         {
-            Settings settingsForm = new Settings();
+            Settings settingsForm = new Settings(userName);
             settingsForm.ShowDialog();
         }
 
@@ -339,5 +346,65 @@ namespace STK2
                     break;
             }
         }
+
+        private void ulozitLabel_LinkClicked(object sender, EventArgs e)
+        {
+            if (!IsLeaf())
+                return;
+
+            //-----------------Panel 1-----------------
+            vozidloData.zakladniInfo.znacka = znacka_modeltxt.Text;
+            vozidloData.zakladniInfo.druh = druh_vozidlatxt.Text;
+            vozidloData.zakladniInfo.spz = spz_rztxt.Text;
+            vozidloData.zakladniInfo.vin = vintxt.Text;
+            vozidloData.zakladniInfo.prvni_registrace = registraceDateTimePicker.Value;
+            vozidloData.zakladniInfo.typ = typ_variantatxt.Text;
+            vozidloData.zakladniInfo.barva = barva_karoserietxt.Text;
+            //-----------------------------------------
+
+            //---------------Panel 2-------------------
+            vozidloData.stavSTK.platnostSTK = platnostSTKDateTimePicker.Value;
+            vozidloData.stavSTK.platnostEmise = platnostEKDateTimePicker.Value;
+            vozidloData.stavSTK.vysledekSTK = label15.Text == "Platná";
+            vozidloData.stavSTK.vysledekEmise = label16.Text == "Platná";
+            vozidloData.stavSTK.typSTK = typSTKTextBox.Text;
+            vozidloData.stavSTK.posledniSTK = posledniSTKDateTimePicker.Value;
+            vozidloData.stavSTK.poznamka = poznamkyTextBox.Text;
+            //-----------------------------------------
+
+            //---------------Panel 3-------------------
+            int val;
+            vozidloData.technickeUdaje.vykon = int.TryParse(vykonTextBox.Text, out val) ? val : 0;
+            vozidloData.technickeUdaje.palivo = palivoTextBox.Text;
+            vozidloData.technickeUdaje.pohon = pohonTextBox.Text;
+            vozidloData.technickeUdaje.hmotnost = int.TryParse(hmotnostTextBox.Text, out val) ? val : 0;
+            vozidloData.technickeUdaje.pocetMist = int.TryParse(mistaTextBox.Text, out val) ? val : 0;
+            vozidloData.technickeUdaje.pneumatiky = pneuTextBox.Text;
+            vozidloData.technickeUdaje.rozmery = rozmeryTextBox.Text;
+            //-----------------------------------------
+
+            //---------------Panel 4-------------------
+            vozidloData.majitel.jmeno_vlastnik = vlastnikTextBox.Text;
+            vozidloData.majitel.provozovatel = provozovatelTextBox.Text;
+            vozidloData.majitel.kontakt = kontaktTextBox.Text;
+            vozidloData.majitel.poznamky = poznamky_vlastnikBox.Text;
+            //-----------------------------------------
+
+            //---------------Panel 5-------------------
+            vozidloData.nehody.zaznam = zaznamyTextBox.Text;
+            vozidloData.nehody.poznamkykSTK = poznamkySTKTextBox.Text;
+            vozidloData.majitel.zmena_vlastnictvi = vlastnictviTextBox.Text;
+            //-----------------------------------------
+
+            TreeNode node = kryptonTreeView1.SelectedNode;
+            string json = JsonConvert.SerializeObject(vozidloData, Formatting.Indented);
+            File.WriteAllText(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
+                    $"{node.Parent.Parent.Name}\\{node.Parent.Name}\\", node.Text + ".json"), json);
+
+            notifyIcon1.BalloonTipTitle = "Upozornění!";
+            notifyIcon1.BalloonTipText = "Data vozidla byla úspěšně uložena!";
+            notifyIcon1.ShowBalloonTip(5000);
+        }
+
     }
 }
