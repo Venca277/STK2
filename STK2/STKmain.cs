@@ -18,6 +18,7 @@ namespace STK2
     {
         private string userName;
         private int settingsIndex = -1;
+        private int currentPanel = -1;
         private VozidloData vozidloData;
 
         public STKmain(string user)
@@ -54,7 +55,8 @@ namespace STK2
                 //asks user to imput vehicle name
                 string odpoved = Interaction.InputBox("Zadej název vozidla:", "Název - lze změnit později", "např Audi R8");
                 odpoved = string.IsNullOrEmpty(odpoved) ? "temp1" : odpoved;
-                kryptonTreeView1.SelectedNode.Nodes.Add(odpoved);
+                TreeNode odpovedNode = new TreeNode(odpoved);
+                kryptonTreeView1.SelectedNode.Nodes.Add(odpovedNode);
 
                 //creates JSON file of the vehicle
                 InitializeJSON(odpoved);
@@ -63,7 +65,7 @@ namespace STK2
                 notifyIcon1.BalloonTipTitle = "Upozornění!";
                 notifyIcon1.BalloonTipText = $"Vozidlo {odpoved} bylo úspěšně vytvořeno!";
                 notifyIcon1.ShowBalloonTip(5000);
-
+                kryptonTreeView1.SelectedNode = odpovedNode;
             }
             // selected node is not allowed to add any subnodes
             else
@@ -166,11 +168,29 @@ namespace STK2
             TreeNode selectedNode = kryptonTreeView1.SelectedNode;
             //TODO: Load vehicle data from JSON file
             string json = File.ReadAllText(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
-                    $"{selectedNode.Parent.Parent.Name}\\{selectedNode.Parent.Name}\\", selectedNode.Name + ".json"));
+                    $"{selectedNode.Parent.Parent.Name}\\{selectedNode.Parent.Name}\\", selectedNode.Text + ".json"));
             vozidloData = JsonConvert.DeserializeObject<VozidloData>(json);
 
             //TODO : Show vehicle data in the appropriate panel
-
+            LoadPanelData();
+            HidePanels();
+            switch (settingsIndex) {
+                case 1:  zakladni_infoPanel.Visible = true; currentPanel = 1;
+                    break;
+                case 2:  stav_stkPanel.Visible = true; currentPanel = 2;
+                    break;
+                case 3:  technicke_udajePanel.Visible = true; currentPanel = 3;
+                    break;
+                case 4:  majitelPanel.Visible = true; currentPanel = 4;
+                    break;
+                case 5:  historiePanel.Visible = true; currentPanel = 5;
+                    break;
+                case -1:  zakladni_infoPanel.Visible = true; currentPanel = 1;
+                    break;
+                default:
+                     zakladni_infoPanel.Visible = true; currentPanel = 1;
+                    break;
+            }
         }
 
         private void HidePanels() { 
@@ -179,6 +199,11 @@ namespace STK2
             stav_stkPanel.Visible = false;
             technicke_udajePanel.Visible = false;
             zakladni_infoPanel.Visible = false;
+            zakladni_infoPanel.Location = new Point(290, 7);
+            stav_stkPanel.Location = new Point(290, 7);
+            technicke_udajePanel.Location = new Point(290, 7);
+            majitelPanel.Location = new Point(290, 7);
+            historiePanel.Location = new Point(290, 7);
         }
         
         private void InitializeJSON(string odpoved)
@@ -198,17 +223,12 @@ namespace STK2
 
         private void LoadPanelData()
         {
-
-
-
-
-
-
-
-
-
+            LoadPanel1();
+            LoadPanel2();
+            LoadPanel3();
+            LoadPanel4();
+            LoadPanel5();
         }
-
         public void LoadPanel1() {
             //---------Panel 1---------------
             znacka_modeltxt.Text = vozidloData.zakladniInfo.znacka;
@@ -262,6 +282,58 @@ namespace STK2
             poznamkySTKTextBox.Text = vozidloData.nehody.poznamkykSTK;
             vlastnictviTextBox.Text = vozidloData.majitel.zmena_vlastnictvi;
             //-------------------------------
+        }
+
+        private void nastaveniLabel_LinkClicked(object sender, EventArgs e)
+        {
+            Settings settingsForm = new Settings();
+            settingsForm.ShowDialog();
+        }
+
+        private void logoutLabel_LinkClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            currentPanel = (currentPanel+1) > 5 ? 1 : currentPanel + 1;
+            UpdatePanel();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            currentPanel = (currentPanel - 1) < 1 ? 5 : currentPanel - 1;
+            UpdatePanel();
+        }
+
+        private void UpdatePanel() {
+            switch (currentPanel)
+            {
+                case 1:
+                    zakladni_infoPanel.Visible = true; currentPanel = 1;
+                    break;
+                case 2:
+                    stav_stkPanel.Visible = true; currentPanel = 2;
+                    break;
+                case 3:
+                    technicke_udajePanel.Visible = true; currentPanel = 3;
+                    break;
+                case 4:
+                    majitelPanel.Visible = true; currentPanel = 4;
+                    break;
+                case 5:
+                    historiePanel.Visible = true; currentPanel = 5;
+                    break;
+                case -1:
+                    zakladni_infoPanel.Visible = true; currentPanel = 1;
+                    break;
+                default:
+                    zakladni_infoPanel.Visible = true; currentPanel = 1;
+                    break;
+            }
         }
     }
 }

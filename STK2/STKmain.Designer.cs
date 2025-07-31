@@ -29,59 +29,60 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("Osobní automobily");
-            System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("Nákladní automobily");
-            System.Windows.Forms.TreeNode treeNode88 = new System.Windows.Forms.TreeNode("Motocykly");
-            System.Windows.Forms.TreeNode treeNode89 = new System.Windows.Forms.TreeNode("Karavany a obytná vozidla");
-            System.Windows.Forms.TreeNode treeNode90 = new System.Windows.Forms.TreeNode("Silniční vozidla", new System.Windows.Forms.TreeNode[] {
-            treeNode86,
-            treeNode87,
-            treeNode88,
-            treeNode89});
-            System.Windows.Forms.TreeNode treeNode91 = new System.Windows.Forms.TreeNode("Malá plavidla");
-            System.Windows.Forms.TreeNode treeNode92 = new System.Windows.Forms.TreeNode("Velká plavidla");
-            System.Windows.Forms.TreeNode treeNode93 = new System.Windows.Forms.TreeNode("Plavidla", new System.Windows.Forms.TreeNode[] {
-            treeNode91,
-            treeNode92});
-            System.Windows.Forms.TreeNode treeNode94 = new System.Windows.Forms.TreeNode("Malá letadla");
-            System.Windows.Forms.TreeNode treeNode95 = new System.Windows.Forms.TreeNode("Dopravní letadla");
-            System.Windows.Forms.TreeNode treeNode96 = new System.Windows.Forms.TreeNode("Vrtulníky a helikoptéry");
-            System.Windows.Forms.TreeNode treeNode97 = new System.Windows.Forms.TreeNode("Letouny", new System.Windows.Forms.TreeNode[] {
-            treeNode94,
-            treeNode95,
-            treeNode96});
-            System.Windows.Forms.TreeNode treeNode98 = new System.Windows.Forms.TreeNode("Zemědělská technika");
-            System.Windows.Forms.TreeNode treeNode99 = new System.Windows.Forms.TreeNode("Stavební technika");
-            System.Windows.Forms.TreeNode treeNode100 = new System.Windows.Forms.TreeNode("Vojenská vozidla");
-            System.Windows.Forms.TreeNode treeNode101 = new System.Windows.Forms.TreeNode("Speciální vozidla");
-            System.Windows.Forms.TreeNode treeNode102 = new System.Windows.Forms.TreeNode("Speciální a jiná vozidla", new System.Windows.Forms.TreeNode[] {
-            treeNode98,
-            treeNode99,
-            treeNode100,
-            treeNode101});
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Osobní automobily");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Nákladní automobily");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Motocykly");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Karavany a obytná vozidla");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Silniční vozidla", new System.Windows.Forms.TreeNode[] {
+            treeNode18,
+            treeNode19,
+            treeNode20,
+            treeNode21});
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Malá plavidla");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Velká plavidla");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Plavidla", new System.Windows.Forms.TreeNode[] {
+            treeNode23,
+            treeNode24});
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Malá letadla");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Dopravní letadla");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Vrtulníky a helikoptéry");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Letouny", new System.Windows.Forms.TreeNode[] {
+            treeNode26,
+            treeNode27,
+            treeNode28});
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Zemědělská technika");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Stavební technika");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Vojenská vozidla");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Speciální vozidla");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Speciální a jiná vozidla", new System.Windows.Forms.TreeNode[] {
+            treeNode30,
+            treeNode31,
+            treeNode32,
+            treeNode33});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(STKmain));
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonTreeView1 = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
             this.pridatButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.odebratButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.znacka_modeltxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.druh_vozidlatxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.spz_rztxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.vintxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.registracetxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.typ_variantatxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.barva_karoserietxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.zakladni_infoPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.backButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.nextButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.technicke_udajePanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.rozmeryTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.mistaTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.pneuTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.hmotnostTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.vykonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.palivoTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.pohonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.stav_stkPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.vysledekEKPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.label16 = new System.Windows.Forms.Label();
@@ -99,21 +100,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.platnostEKTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.technicke_udajePanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.rozmeryTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.mistaTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.pneuTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.hmotnostTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.vykonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.palivoTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.pohonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.majitelPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -130,26 +116,40 @@
             this.label33 = new System.Windows.Forms.Label();
             this.poznamkySTKTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.vlastnictviTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.zakladni_infoPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.barva_karoserietxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.registracetxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.typ_variantatxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.vintxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.znacka_modeltxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.druh_vozidlatxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.spz_rztxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.gradientPanel1 = new GradientPanel();
             this.logoutLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.nastaveniLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.nameLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zakladni_infoPanel)).BeginInit();
-            this.zakladni_infoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.technicke_udajePanel)).BeginInit();
+            this.technicke_udajePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stav_stkPanel)).BeginInit();
             this.stav_stkPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vysledekEKPanel)).BeginInit();
             this.vysledekEKPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vysledekSTKPanel)).BeginInit();
             this.vysledekSTKPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.technicke_udajePanel)).BeginInit();
-            this.technicke_udajePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.majitelPanel)).BeginInit();
             this.majitelPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historiePanel)).BeginInit();
             this.historiePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zakladni_infoPanel)).BeginInit();
+            this.zakladni_infoPanel.SuspendLayout();
             this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,45 +173,45 @@
             this.kryptonTreeView1.BorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.InputControlRibbon;
             this.kryptonTreeView1.Location = new System.Drawing.Point(12, 12);
             this.kryptonTreeView1.Name = "kryptonTreeView1";
-            treeNode86.Name = "osobni";
-            treeNode86.Text = "Osobní automobily";
-            treeNode87.Name = "nakladni";
-            treeNode87.Text = "Nákladní automobily";
-            treeNode88.Name = "motocykly";
-            treeNode88.Text = "Motocykly";
-            treeNode89.Name = "karavany";
-            treeNode89.Text = "Karavany a obytná vozidla";
-            treeNode90.Name = "silnicni_vozidla";
-            treeNode90.Text = "Silniční vozidla";
-            treeNode91.Name = "mala_plavidla";
-            treeNode91.Text = "Malá plavidla";
-            treeNode92.Name = "velka_plavidla";
-            treeNode92.Text = "Velká plavidla";
-            treeNode93.Name = "plavidla";
-            treeNode93.Text = "Plavidla";
-            treeNode94.Name = "mala_letadla";
-            treeNode94.Text = "Malá letadla";
-            treeNode95.Name = "dopravni_letadla";
-            treeNode95.Text = "Dopravní letadla";
-            treeNode96.Name = "vrtulniky";
-            treeNode96.Text = "Vrtulníky a helikoptéry";
-            treeNode97.Name = "letouny";
-            treeNode97.Text = "Letouny";
-            treeNode98.Name = "zemedelska_technika";
-            treeNode98.Text = "Zemědělská technika";
-            treeNode99.Name = "stavebni_technika";
-            treeNode99.Text = "Stavební technika";
-            treeNode100.Name = "vojenska_technika";
-            treeNode100.Text = "Vojenská vozidla";
-            treeNode101.Name = "specialni_technika";
-            treeNode101.Text = "Speciální vozidla";
-            treeNode102.Name = "specialni_vozidla";
-            treeNode102.Text = "Speciální a jiná vozidla";
+            treeNode18.Name = "osobni";
+            treeNode18.Text = "Osobní automobily";
+            treeNode19.Name = "nakladni";
+            treeNode19.Text = "Nákladní automobily";
+            treeNode20.Name = "motocykly";
+            treeNode20.Text = "Motocykly";
+            treeNode21.Name = "karavany";
+            treeNode21.Text = "Karavany a obytná vozidla";
+            treeNode22.Name = "silnicni_vozidla";
+            treeNode22.Text = "Silniční vozidla";
+            treeNode23.Name = "mala_plavidla";
+            treeNode23.Text = "Malá plavidla";
+            treeNode24.Name = "velka_plavidla";
+            treeNode24.Text = "Velká plavidla";
+            treeNode25.Name = "plavidla";
+            treeNode25.Text = "Plavidla";
+            treeNode26.Name = "mala_letadla";
+            treeNode26.Text = "Malá letadla";
+            treeNode27.Name = "dopravni_letadla";
+            treeNode27.Text = "Dopravní letadla";
+            treeNode28.Name = "vrtulniky";
+            treeNode28.Text = "Vrtulníky a helikoptéry";
+            treeNode29.Name = "letouny";
+            treeNode29.Text = "Letouny";
+            treeNode30.Name = "zemedelska_technika";
+            treeNode30.Text = "Zemědělská technika";
+            treeNode31.Name = "stavebni_technika";
+            treeNode31.Text = "Stavební technika";
+            treeNode32.Name = "vojenska_technika";
+            treeNode32.Text = "Vojenská vozidla";
+            treeNode33.Name = "specialni_technika";
+            treeNode33.Text = "Speciální vozidla";
+            treeNode34.Name = "specialni_vozidla";
+            treeNode34.Text = "Speciální a jiná vozidla";
             this.kryptonTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode90,
-            treeNode93,
-            treeNode97,
-            treeNode102});
+            treeNode22,
+            treeNode25,
+            treeNode29,
+            treeNode34});
             this.kryptonTreeView1.Palette = this.kryptonPalette1;
             this.kryptonTreeView1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonTreeView1.Size = new System.Drawing.Size(410, 432);
@@ -402,203 +402,6 @@
             this.odebratButton.Values.Text = "Odebrat vozidlo";
             this.odebratButton.Click += new System.EventHandler(this.odebratButton_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label1.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(17, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 36);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Značka a model: ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label2.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(17, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 36);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Druh vozidla: ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label3.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(17, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 36);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "SPZ / RZ: ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label4.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(17, 202);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 36);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "VIN: ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label5.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label5.Location = new System.Drawing.Point(17, 262);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(283, 36);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Datum první registrace: ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label6.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(17, 322);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(189, 36);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Typ a varianta: ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label7.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(17, 382);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(202, 36);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Barva karoserie: ";
-            // 
-            // znacka_modeltxt
-            // 
-            this.znacka_modeltxt.Location = new System.Drawing.Point(324, 15);
-            this.znacka_modeltxt.Name = "znacka_modeltxt";
-            this.znacka_modeltxt.Size = new System.Drawing.Size(436, 43);
-            this.znacka_modeltxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.znacka_modeltxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.znacka_modeltxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.znacka_modeltxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.znacka_modeltxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.znacka_modeltxt.StateCommon.Border.Rounding = 20;
-            this.znacka_modeltxt.StateCommon.Border.Width = 1;
-            this.znacka_modeltxt.TabIndex = 7;
-            this.znacka_modeltxt.TextChanged += new System.EventHandler(this.kryptonTextBox1_TextChanged);
-            // 
-            // druh_vozidlatxt
-            // 
-            this.druh_vozidlatxt.Location = new System.Drawing.Point(324, 75);
-            this.druh_vozidlatxt.Name = "druh_vozidlatxt";
-            this.druh_vozidlatxt.Size = new System.Drawing.Size(436, 43);
-            this.druh_vozidlatxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.druh_vozidlatxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.druh_vozidlatxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.druh_vozidlatxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.druh_vozidlatxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.druh_vozidlatxt.StateCommon.Border.Rounding = 20;
-            this.druh_vozidlatxt.StateCommon.Border.Width = 1;
-            this.druh_vozidlatxt.TabIndex = 8;
-            // 
-            // spz_rztxt
-            // 
-            this.spz_rztxt.Location = new System.Drawing.Point(324, 135);
-            this.spz_rztxt.Name = "spz_rztxt";
-            this.spz_rztxt.Size = new System.Drawing.Size(436, 43);
-            this.spz_rztxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.spz_rztxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.spz_rztxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.spz_rztxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.spz_rztxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.spz_rztxt.StateCommon.Border.Rounding = 20;
-            this.spz_rztxt.StateCommon.Border.Width = 1;
-            this.spz_rztxt.TabIndex = 8;
-            // 
-            // vintxt
-            // 
-            this.vintxt.Location = new System.Drawing.Point(324, 195);
-            this.vintxt.Name = "vintxt";
-            this.vintxt.Size = new System.Drawing.Size(436, 43);
-            this.vintxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.vintxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.vintxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.vintxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.vintxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.vintxt.StateCommon.Border.Rounding = 20;
-            this.vintxt.StateCommon.Border.Width = 1;
-            this.vintxt.TabIndex = 9;
-            // 
-            // registracetxt
-            // 
-            this.registracetxt.Location = new System.Drawing.Point(324, 255);
-            this.registracetxt.Name = "registracetxt";
-            this.registracetxt.Size = new System.Drawing.Size(436, 43);
-            this.registracetxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.registracetxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.registracetxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.registracetxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.registracetxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.registracetxt.StateCommon.Border.Rounding = 20;
-            this.registracetxt.StateCommon.Border.Width = 1;
-            this.registracetxt.TabIndex = 10;
-            // 
-            // typ_variantatxt
-            // 
-            this.typ_variantatxt.Location = new System.Drawing.Point(324, 315);
-            this.typ_variantatxt.Name = "typ_variantatxt";
-            this.typ_variantatxt.Size = new System.Drawing.Size(436, 43);
-            this.typ_variantatxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.typ_variantatxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.typ_variantatxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.typ_variantatxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.typ_variantatxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.typ_variantatxt.StateCommon.Border.Rounding = 20;
-            this.typ_variantatxt.StateCommon.Border.Width = 1;
-            this.typ_variantatxt.TabIndex = 8;
-            // 
-            // barva_karoserietxt
-            // 
-            this.barva_karoserietxt.Location = new System.Drawing.Point(324, 375);
-            this.barva_karoserietxt.Name = "barva_karoserietxt";
-            this.barva_karoserietxt.Size = new System.Drawing.Size(436, 43);
-            this.barva_karoserietxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.barva_karoserietxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.barva_karoserietxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.barva_karoserietxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.barva_karoserietxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.barva_karoserietxt.StateCommon.Border.Rounding = 20;
-            this.barva_karoserietxt.StateCommon.Border.Width = 1;
-            this.barva_karoserietxt.TabIndex = 11;
-            // 
             // kryptonComboBox1
             // 
             this.kryptonComboBox1.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonNavigatorMini;
@@ -644,30 +447,6 @@
             this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.kryptonComboBox1.StateCommon.Item.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.kryptonComboBox1.TabIndex = 6;
-            // 
-            // zakladni_infoPanel
-            // 
-            this.zakladni_infoPanel.Controls.Add(this.barva_karoserietxt);
-            this.zakladni_infoPanel.Controls.Add(this.label1);
-            this.zakladni_infoPanel.Controls.Add(this.label4);
-            this.zakladni_infoPanel.Controls.Add(this.label7);
-            this.zakladni_infoPanel.Controls.Add(this.registracetxt);
-            this.zakladni_infoPanel.Controls.Add(this.typ_variantatxt);
-            this.zakladni_infoPanel.Controls.Add(this.vintxt);
-            this.zakladni_infoPanel.Controls.Add(this.znacka_modeltxt);
-            this.zakladni_infoPanel.Controls.Add(this.label5);
-            this.zakladni_infoPanel.Controls.Add(this.label2);
-            this.zakladni_infoPanel.Controls.Add(this.label3);
-            this.zakladni_infoPanel.Controls.Add(this.label6);
-            this.zakladni_infoPanel.Controls.Add(this.druh_vozidlatxt);
-            this.zakladni_infoPanel.Controls.Add(this.spz_rztxt);
-            this.zakladni_infoPanel.Location = new System.Drawing.Point(848, 435);
-            this.zakladni_infoPanel.Name = "zakladni_infoPanel";
-            this.zakladni_infoPanel.Size = new System.Drawing.Size(786, 432);
-            this.zakladni_infoPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.zakladni_infoPanel.StateCommon.Color2 = System.Drawing.Color.Gray;
-            this.zakladni_infoPanel.StateCommon.ColorAngle = 45F;
-            this.zakladni_infoPanel.TabIndex = 10;
             // 
             // backButton
             // 
@@ -761,6 +540,7 @@
             this.backButton.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.backButton.TabIndex = 11;
             this.backButton.Values.Text = "◄";
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // nextButton
             // 
@@ -856,6 +636,232 @@
             this.nextButton.TabIndex = 12;
             this.nextButton.Values.Image = ((System.Drawing.Image)(resources.GetObject("nextButton.Values.Image")));
             this.nextButton.Values.Text = "►";
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Visible = true;
+            // 
+            // technicke_udajePanel
+            // 
+            this.technicke_udajePanel.Controls.Add(this.rozmeryTextBox);
+            this.technicke_udajePanel.Controls.Add(this.label17);
+            this.technicke_udajePanel.Controls.Add(this.label18);
+            this.technicke_udajePanel.Controls.Add(this.label19);
+            this.technicke_udajePanel.Controls.Add(this.mistaTextBox);
+            this.technicke_udajePanel.Controls.Add(this.pneuTextBox);
+            this.technicke_udajePanel.Controls.Add(this.hmotnostTextBox);
+            this.technicke_udajePanel.Controls.Add(this.vykonTextBox);
+            this.technicke_udajePanel.Controls.Add(this.label20);
+            this.technicke_udajePanel.Controls.Add(this.label21);
+            this.technicke_udajePanel.Controls.Add(this.label22);
+            this.technicke_udajePanel.Controls.Add(this.label23);
+            this.technicke_udajePanel.Controls.Add(this.palivoTextBox);
+            this.technicke_udajePanel.Controls.Add(this.pohonTextBox);
+            this.technicke_udajePanel.Location = new System.Drawing.Point(1201, 9);
+            this.technicke_udajePanel.Name = "technicke_udajePanel";
+            this.technicke_udajePanel.Size = new System.Drawing.Size(786, 432);
+            this.technicke_udajePanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.technicke_udajePanel.StateCommon.Color2 = System.Drawing.Color.Gray;
+            this.technicke_udajePanel.StateCommon.ColorAngle = 45F;
+            this.technicke_udajePanel.TabIndex = 12;
+            // 
+            // rozmeryTextBox
+            // 
+            this.rozmeryTextBox.Location = new System.Drawing.Point(324, 375);
+            this.rozmeryTextBox.Name = "rozmeryTextBox";
+            this.rozmeryTextBox.Size = new System.Drawing.Size(436, 43);
+            this.rozmeryTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.rozmeryTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.rozmeryTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.rozmeryTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.rozmeryTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.rozmeryTextBox.StateCommon.Border.Rounding = 20;
+            this.rozmeryTextBox.StateCommon.Border.Width = 1;
+            this.rozmeryTextBox.TabIndex = 11;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label17.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label17.Location = new System.Drawing.Point(17, 22);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(274, 36);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Objem a výkon motoru:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label18.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label18.Location = new System.Drawing.Point(17, 202);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(128, 36);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Hmotnost:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label19.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label19.Location = new System.Drawing.Point(17, 382);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(201, 36);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Rozměry vozidla:";
+            // 
+            // mistaTextBox
+            // 
+            this.mistaTextBox.Location = new System.Drawing.Point(324, 255);
+            this.mistaTextBox.Name = "mistaTextBox";
+            this.mistaTextBox.Size = new System.Drawing.Size(436, 43);
+            this.mistaTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.mistaTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.mistaTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.mistaTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.mistaTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.mistaTextBox.StateCommon.Border.Rounding = 20;
+            this.mistaTextBox.StateCommon.Border.Width = 1;
+            this.mistaTextBox.TabIndex = 10;
+            // 
+            // pneuTextBox
+            // 
+            this.pneuTextBox.Location = new System.Drawing.Point(324, 315);
+            this.pneuTextBox.Name = "pneuTextBox";
+            this.pneuTextBox.Size = new System.Drawing.Size(436, 43);
+            this.pneuTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.pneuTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.pneuTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.pneuTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.pneuTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.pneuTextBox.StateCommon.Border.Rounding = 20;
+            this.pneuTextBox.StateCommon.Border.Width = 1;
+            this.pneuTextBox.TabIndex = 8;
+            // 
+            // hmotnostTextBox
+            // 
+            this.hmotnostTextBox.Location = new System.Drawing.Point(324, 195);
+            this.hmotnostTextBox.Name = "hmotnostTextBox";
+            this.hmotnostTextBox.Size = new System.Drawing.Size(436, 43);
+            this.hmotnostTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.hmotnostTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.hmotnostTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.hmotnostTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.hmotnostTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.hmotnostTextBox.StateCommon.Border.Rounding = 20;
+            this.hmotnostTextBox.StateCommon.Border.Width = 1;
+            this.hmotnostTextBox.TabIndex = 9;
+            // 
+            // vykonTextBox
+            // 
+            this.vykonTextBox.Location = new System.Drawing.Point(324, 15);
+            this.vykonTextBox.Name = "vykonTextBox";
+            this.vykonTextBox.Size = new System.Drawing.Size(436, 43);
+            this.vykonTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.vykonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.vykonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.vykonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.vykonTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.vykonTextBox.StateCommon.Border.Rounding = 20;
+            this.vykonTextBox.StateCommon.Border.Width = 1;
+            this.vykonTextBox.TabIndex = 7;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label20.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label20.Location = new System.Drawing.Point(17, 262);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(136, 36);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "Počet míst:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label21.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label21.Location = new System.Drawing.Point(17, 82);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(137, 36);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Typ paliva:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label22.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label22.Location = new System.Drawing.Point(17, 142);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(90, 36);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Pohon:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label23.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label23.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label23.Location = new System.Drawing.Point(17, 322);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(241, 36);
+            this.label23.TabIndex = 5;
+            this.label23.Text = "Rozměry pneumatik:";
+            // 
+            // palivoTextBox
+            // 
+            this.palivoTextBox.Location = new System.Drawing.Point(324, 75);
+            this.palivoTextBox.Name = "palivoTextBox";
+            this.palivoTextBox.Size = new System.Drawing.Size(436, 43);
+            this.palivoTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.palivoTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.palivoTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.palivoTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.palivoTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.palivoTextBox.StateCommon.Border.Rounding = 20;
+            this.palivoTextBox.StateCommon.Border.Width = 1;
+            this.palivoTextBox.TabIndex = 8;
+            // 
+            // pohonTextBox
+            // 
+            this.pohonTextBox.Location = new System.Drawing.Point(324, 135);
+            this.pohonTextBox.Name = "pohonTextBox";
+            this.pohonTextBox.Size = new System.Drawing.Size(436, 43);
+            this.pohonTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.pohonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.pohonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.pohonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.pohonTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.pohonTextBox.StateCommon.Border.Rounding = 20;
+            this.pohonTextBox.StateCommon.Border.Width = 1;
+            this.pohonTextBox.TabIndex = 8;
             // 
             // stav_stkPanel
             // 
@@ -873,7 +879,7 @@
             this.stav_stkPanel.Controls.Add(this.label13);
             this.stav_stkPanel.Controls.Add(this.label14);
             this.stav_stkPanel.Controls.Add(this.platnostEKTextBox);
-            this.stav_stkPanel.Location = new System.Drawing.Point(31, 540);
+            this.stav_stkPanel.Location = new System.Drawing.Point(1175, 24);
             this.stav_stkPanel.Name = "stav_stkPanel";
             this.stav_stkPanel.Size = new System.Drawing.Size(786, 432);
             this.stav_stkPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1086,230 +1092,9 @@
             this.platnostEKTextBox.StateCommon.Border.Width = 1;
             this.platnostEKTextBox.TabIndex = 8;
             // 
-            // technicke_udajePanel
-            // 
-            this.technicke_udajePanel.Controls.Add(this.rozmeryTextBox);
-            this.technicke_udajePanel.Controls.Add(this.label17);
-            this.technicke_udajePanel.Controls.Add(this.label18);
-            this.technicke_udajePanel.Controls.Add(this.label19);
-            this.technicke_udajePanel.Controls.Add(this.mistaTextBox);
-            this.technicke_udajePanel.Controls.Add(this.pneuTextBox);
-            this.technicke_udajePanel.Controls.Add(this.hmotnostTextBox);
-            this.technicke_udajePanel.Controls.Add(this.vykonTextBox);
-            this.technicke_udajePanel.Controls.Add(this.label20);
-            this.technicke_udajePanel.Controls.Add(this.label21);
-            this.technicke_udajePanel.Controls.Add(this.label22);
-            this.technicke_udajePanel.Controls.Add(this.label23);
-            this.technicke_udajePanel.Controls.Add(this.palivoTextBox);
-            this.technicke_udajePanel.Controls.Add(this.pohonTextBox);
-            this.technicke_udajePanel.Location = new System.Drawing.Point(432, 12);
-            this.technicke_udajePanel.Name = "technicke_udajePanel";
-            this.technicke_udajePanel.Size = new System.Drawing.Size(786, 432);
-            this.technicke_udajePanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.technicke_udajePanel.StateCommon.Color2 = System.Drawing.Color.Gray;
-            this.technicke_udajePanel.StateCommon.ColorAngle = 45F;
-            this.technicke_udajePanel.TabIndex = 12;
-            // 
-            // rozmeryTextBox
-            // 
-            this.rozmeryTextBox.Location = new System.Drawing.Point(324, 375);
-            this.rozmeryTextBox.Name = "rozmeryTextBox";
-            this.rozmeryTextBox.Size = new System.Drawing.Size(436, 43);
-            this.rozmeryTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.rozmeryTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.rozmeryTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.rozmeryTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.rozmeryTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.rozmeryTextBox.StateCommon.Border.Rounding = 20;
-            this.rozmeryTextBox.StateCommon.Border.Width = 1;
-            this.rozmeryTextBox.TabIndex = 11;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label17.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label17.Location = new System.Drawing.Point(17, 22);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(274, 36);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Objem a výkon motoru:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label18.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(17, 202);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(128, 36);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Hmotnost:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label19.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label19.Location = new System.Drawing.Point(17, 382);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(201, 36);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Rozměry vozidla:";
-            // 
-            // mistaTextBox
-            // 
-            this.mistaTextBox.Location = new System.Drawing.Point(324, 255);
-            this.mistaTextBox.Name = "mistaTextBox";
-            this.mistaTextBox.Size = new System.Drawing.Size(436, 43);
-            this.mistaTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.mistaTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.mistaTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.mistaTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.mistaTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.mistaTextBox.StateCommon.Border.Rounding = 20;
-            this.mistaTextBox.StateCommon.Border.Width = 1;
-            this.mistaTextBox.TabIndex = 10;
-            // 
-            // pneuTextBox
-            // 
-            this.pneuTextBox.Location = new System.Drawing.Point(324, 315);
-            this.pneuTextBox.Name = "pneuTextBox";
-            this.pneuTextBox.Size = new System.Drawing.Size(436, 43);
-            this.pneuTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.pneuTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.pneuTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.pneuTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.pneuTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.pneuTextBox.StateCommon.Border.Rounding = 20;
-            this.pneuTextBox.StateCommon.Border.Width = 1;
-            this.pneuTextBox.TabIndex = 8;
-            // 
-            // hmotnostTextBox
-            // 
-            this.hmotnostTextBox.Location = new System.Drawing.Point(324, 195);
-            this.hmotnostTextBox.Name = "hmotnostTextBox";
-            this.hmotnostTextBox.Size = new System.Drawing.Size(436, 43);
-            this.hmotnostTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.hmotnostTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.hmotnostTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.hmotnostTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.hmotnostTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.hmotnostTextBox.StateCommon.Border.Rounding = 20;
-            this.hmotnostTextBox.StateCommon.Border.Width = 1;
-            this.hmotnostTextBox.TabIndex = 9;
-            // 
-            // vykonTextBox
-            // 
-            this.vykonTextBox.Location = new System.Drawing.Point(324, 15);
-            this.vykonTextBox.Name = "vykonTextBox";
-            this.vykonTextBox.Size = new System.Drawing.Size(436, 43);
-            this.vykonTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.vykonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.vykonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.vykonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.vykonTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.vykonTextBox.StateCommon.Border.Rounding = 20;
-            this.vykonTextBox.StateCommon.Border.Width = 1;
-            this.vykonTextBox.TabIndex = 7;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label20.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label20.Location = new System.Drawing.Point(17, 262);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(136, 36);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "Počet míst:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label21.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label21.Location = new System.Drawing.Point(17, 82);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(137, 36);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "Typ paliva:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label22.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label22.Location = new System.Drawing.Point(17, 142);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(90, 36);
-            this.label22.TabIndex = 2;
-            this.label22.Text = "Pohon:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label23.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label23.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label23.Location = new System.Drawing.Point(17, 322);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(241, 36);
-            this.label23.TabIndex = 5;
-            this.label23.Text = "Rozměry pneumatik:";
-            // 
-            // palivoTextBox
-            // 
-            this.palivoTextBox.Location = new System.Drawing.Point(324, 75);
-            this.palivoTextBox.Name = "palivoTextBox";
-            this.palivoTextBox.Size = new System.Drawing.Size(436, 43);
-            this.palivoTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.palivoTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.palivoTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.palivoTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.palivoTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.palivoTextBox.StateCommon.Border.Rounding = 20;
-            this.palivoTextBox.StateCommon.Border.Width = 1;
-            this.palivoTextBox.TabIndex = 8;
-            // 
-            // pohonTextBox
-            // 
-            this.pohonTextBox.Location = new System.Drawing.Point(324, 135);
-            this.pohonTextBox.Name = "pohonTextBox";
-            this.pohonTextBox.Size = new System.Drawing.Size(436, 43);
-            this.pohonTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.pohonTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.pohonTextBox.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.pohonTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.pohonTextBox.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.pohonTextBox.StateCommon.Border.Rounding = 20;
-            this.pohonTextBox.StateCommon.Border.Width = 1;
-            this.pohonTextBox.TabIndex = 8;
-            // 
             // majitelPanel
             // 
             this.majitelPanel.Controls.Add(this.label24);
-            this.majitelPanel.Controls.Add(this.historiePanel);
             this.majitelPanel.Controls.Add(this.label25);
             this.majitelPanel.Controls.Add(this.poznamky_vlastnikBox);
             this.majitelPanel.Controls.Add(this.vlastnikTextBox);
@@ -1317,7 +1102,7 @@
             this.majitelPanel.Controls.Add(this.label29);
             this.majitelPanel.Controls.Add(this.provozovatelTextBox);
             this.majitelPanel.Controls.Add(this.kontaktTextBox);
-            this.majitelPanel.Location = new System.Drawing.Point(432, 12);
+            this.majitelPanel.Location = new System.Drawing.Point(1158, 46);
             this.majitelPanel.Name = "majitelPanel";
             this.majitelPanel.Size = new System.Drawing.Size(786, 432);
             this.majitelPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1447,7 +1232,7 @@
             this.historiePanel.Controls.Add(this.label33);
             this.historiePanel.Controls.Add(this.poznamkySTKTextBox);
             this.historiePanel.Controls.Add(this.vlastnictviTextBox);
-            this.historiePanel.Location = new System.Drawing.Point(0, 0);
+            this.historiePanel.Location = new System.Drawing.Point(432, 12);
             this.historiePanel.Name = "historiePanel";
             this.historiePanel.Size = new System.Drawing.Size(786, 432);
             this.historiePanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1542,10 +1327,226 @@
             this.vlastnictviTextBox.StateCommon.Border.Width = 1;
             this.vlastnictviTextBox.TabIndex = 8;
             // 
-            // notifyIcon1
+            // zakladni_infoPanel
             // 
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Visible = true;
+            this.zakladni_infoPanel.Controls.Add(this.barva_karoserietxt);
+            this.zakladni_infoPanel.Controls.Add(this.label1);
+            this.zakladni_infoPanel.Controls.Add(this.label4);
+            this.zakladni_infoPanel.Controls.Add(this.label7);
+            this.zakladni_infoPanel.Controls.Add(this.registracetxt);
+            this.zakladni_infoPanel.Controls.Add(this.typ_variantatxt);
+            this.zakladni_infoPanel.Controls.Add(this.vintxt);
+            this.zakladni_infoPanel.Controls.Add(this.znacka_modeltxt);
+            this.zakladni_infoPanel.Controls.Add(this.label5);
+            this.zakladni_infoPanel.Controls.Add(this.label2);
+            this.zakladni_infoPanel.Controls.Add(this.label3);
+            this.zakladni_infoPanel.Controls.Add(this.label6);
+            this.zakladni_infoPanel.Controls.Add(this.druh_vozidlatxt);
+            this.zakladni_infoPanel.Controls.Add(this.spz_rztxt);
+            this.zakladni_infoPanel.Location = new System.Drawing.Point(1132, 74);
+            this.zakladni_infoPanel.Name = "zakladni_infoPanel";
+            this.zakladni_infoPanel.Size = new System.Drawing.Size(786, 432);
+            this.zakladni_infoPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.zakladni_infoPanel.StateCommon.Color2 = System.Drawing.Color.Gray;
+            this.zakladni_infoPanel.StateCommon.ColorAngle = 45F;
+            this.zakladni_infoPanel.TabIndex = 10;
+            // 
+            // barva_karoserietxt
+            // 
+            this.barva_karoserietxt.Location = new System.Drawing.Point(324, 375);
+            this.barva_karoserietxt.Name = "barva_karoserietxt";
+            this.barva_karoserietxt.Size = new System.Drawing.Size(436, 43);
+            this.barva_karoserietxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.barva_karoserietxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.barva_karoserietxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.barva_karoserietxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.barva_karoserietxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.barva_karoserietxt.StateCommon.Border.Rounding = 20;
+            this.barva_karoserietxt.StateCommon.Border.Width = 1;
+            this.barva_karoserietxt.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label1.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(17, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Značka a model: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label4.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Location = new System.Drawing.Point(17, 202);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 36);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "VIN: ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label7.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(17, 382);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(202, 36);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Barva karoserie: ";
+            // 
+            // registracetxt
+            // 
+            this.registracetxt.Location = new System.Drawing.Point(324, 255);
+            this.registracetxt.Name = "registracetxt";
+            this.registracetxt.Size = new System.Drawing.Size(436, 43);
+            this.registracetxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.registracetxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.registracetxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.registracetxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.registracetxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.registracetxt.StateCommon.Border.Rounding = 20;
+            this.registracetxt.StateCommon.Border.Width = 1;
+            this.registracetxt.TabIndex = 10;
+            // 
+            // typ_variantatxt
+            // 
+            this.typ_variantatxt.Location = new System.Drawing.Point(324, 315);
+            this.typ_variantatxt.Name = "typ_variantatxt";
+            this.typ_variantatxt.Size = new System.Drawing.Size(436, 43);
+            this.typ_variantatxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.typ_variantatxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.typ_variantatxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.typ_variantatxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.typ_variantatxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.typ_variantatxt.StateCommon.Border.Rounding = 20;
+            this.typ_variantatxt.StateCommon.Border.Width = 1;
+            this.typ_variantatxt.TabIndex = 8;
+            // 
+            // vintxt
+            // 
+            this.vintxt.Location = new System.Drawing.Point(324, 195);
+            this.vintxt.Name = "vintxt";
+            this.vintxt.Size = new System.Drawing.Size(436, 43);
+            this.vintxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.vintxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.vintxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.vintxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.vintxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.vintxt.StateCommon.Border.Rounding = 20;
+            this.vintxt.StateCommon.Border.Width = 1;
+            this.vintxt.TabIndex = 9;
+            // 
+            // znacka_modeltxt
+            // 
+            this.znacka_modeltxt.Location = new System.Drawing.Point(324, 15);
+            this.znacka_modeltxt.Name = "znacka_modeltxt";
+            this.znacka_modeltxt.Size = new System.Drawing.Size(436, 43);
+            this.znacka_modeltxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.znacka_modeltxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.znacka_modeltxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.znacka_modeltxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.znacka_modeltxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.znacka_modeltxt.StateCommon.Border.Rounding = 20;
+            this.znacka_modeltxt.StateCommon.Border.Width = 1;
+            this.znacka_modeltxt.TabIndex = 7;
+            this.znacka_modeltxt.TextChanged += new System.EventHandler(this.kryptonTextBox1_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label5.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.Location = new System.Drawing.Point(17, 262);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(283, 36);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Datum první registrace: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label2.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(17, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 36);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Druh vozidla: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label3.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Location = new System.Drawing.Point(17, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 36);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "SPZ / RZ: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label6.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(17, 322);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(189, 36);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Typ a varianta: ";
+            // 
+            // druh_vozidlatxt
+            // 
+            this.druh_vozidlatxt.Location = new System.Drawing.Point(324, 75);
+            this.druh_vozidlatxt.Name = "druh_vozidlatxt";
+            this.druh_vozidlatxt.Size = new System.Drawing.Size(436, 43);
+            this.druh_vozidlatxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.druh_vozidlatxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.druh_vozidlatxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.druh_vozidlatxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.druh_vozidlatxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.druh_vozidlatxt.StateCommon.Border.Rounding = 20;
+            this.druh_vozidlatxt.StateCommon.Border.Width = 1;
+            this.druh_vozidlatxt.TabIndex = 8;
+            // 
+            // spz_rztxt
+            // 
+            this.spz_rztxt.Location = new System.Drawing.Point(324, 135);
+            this.spz_rztxt.Name = "spz_rztxt";
+            this.spz_rztxt.Size = new System.Drawing.Size(436, 43);
+            this.spz_rztxt.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.spz_rztxt.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.spz_rztxt.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.spz_rztxt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.spz_rztxt.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.spz_rztxt.StateCommon.Border.Rounding = 20;
+            this.spz_rztxt.StateCommon.Border.Width = 1;
+            this.spz_rztxt.TabIndex = 8;
             // 
             // gradientPanel1
             // 
@@ -1568,6 +1569,7 @@
             this.logoutLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.logoutLabel.TabIndex = 2;
             this.logoutLabel.Values.Text = "Odhlásit se";
+            this.logoutLabel.LinkClicked += new System.EventHandler(this.logoutLabel_LinkClicked);
             // 
             // nastaveniLabel
             // 
@@ -1577,6 +1579,7 @@
             this.nastaveniLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.nastaveniLabel.TabIndex = 1;
             this.nastaveniLabel.Values.Text = "Nastavení";
+            this.nastaveniLabel.LinkClicked += new System.EventHandler(this.nastaveniLabel_LinkClicked);
             // 
             // nameLabel
             // 
@@ -1594,12 +1597,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(1218, 734);
             this.Controls.Add(this.gradientPanel1);
+            this.Controls.Add(this.historiePanel);
             this.Controls.Add(this.majitelPanel);
             this.Controls.Add(this.stav_stkPanel);
             this.Controls.Add(this.technicke_udajePanel);
+            this.Controls.Add(this.zakladni_infoPanel);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.backButton);
-            this.Controls.Add(this.zakladni_infoPanel);
             this.Controls.Add(this.kryptonComboBox1);
             this.Controls.Add(this.odebratButton);
             this.Controls.Add(this.pridatButton);
@@ -1610,9 +1614,9 @@
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "STK údržba vozidel";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zakladni_infoPanel)).EndInit();
-            this.zakladni_infoPanel.ResumeLayout(false);
-            this.zakladni_infoPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.technicke_udajePanel)).EndInit();
+            this.technicke_udajePanel.ResumeLayout(false);
+            this.technicke_udajePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stav_stkPanel)).EndInit();
             this.stav_stkPanel.ResumeLayout(false);
             this.stav_stkPanel.PerformLayout();
@@ -1622,15 +1626,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.vysledekSTKPanel)).EndInit();
             this.vysledekSTKPanel.ResumeLayout(false);
             this.vysledekSTKPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.technicke_udajePanel)).EndInit();
-            this.technicke_udajePanel.ResumeLayout(false);
-            this.technicke_udajePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.majitelPanel)).EndInit();
             this.majitelPanel.ResumeLayout(false);
             this.majitelPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historiePanel)).EndInit();
             this.historiePanel.ResumeLayout(false);
             this.historiePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zakladni_infoPanel)).EndInit();
+            this.zakladni_infoPanel.ResumeLayout(false);
+            this.zakladni_infoPanel.PerformLayout();
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
             this.ResumeLayout(false);
