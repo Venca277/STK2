@@ -299,7 +299,10 @@ namespace STK2
 
         private void logoutLabel_LinkClicked(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Form1 loginForm = new Form1(false);
+            loginForm.ShowDialog();
+            this.Close();
         }
 
         private void nextButton_Click(object sender, EventArgs e)
@@ -408,6 +411,9 @@ namespace STK2
 
         private void kryptonComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (!IsLeaf())
+                return;
+
             HidePanels();
             currentPanel = kryptonComboBox1.SelectedIndex + 1;
             UpdatePanel();

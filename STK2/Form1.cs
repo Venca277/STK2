@@ -20,14 +20,14 @@ namespace STK2
         private string userName = "";
         private string password = "";
         private bool autolog = false;
-        public Form1()
+        public Form1(bool notAfterLogout)
         {
             InitializeComponent();
             progressBar1.Visible = false;
             seenConfig = new IniFile(Path.Combine(Application.StartupPath, "seen.ini"));
             
             //fill login and password if autolog is enabled
-            if (seenConfig.Read("User", "autolog") == "true") {
+            if (seenConfig.Read("User", "autolog") == "true" && notAfterLogout) {
                 config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\{seenConfig.Read("User", "Username")}\\", "config.ini"));
                 loginTextBox.Text = config.Read("UserInfo", "Username");
                 hesloTextBox.Text = config.Read("UserInfo", "Password");
@@ -58,11 +58,14 @@ namespace STK2
             //gets access to config of user in case other wants to login
             config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\{loginTextBox.Text}\\", "config.ini"));
 
+            //checks if config exists
             if (config == null)
             {
                 MessageBox.Show("Chyba při načítání konfiguračního souboru. Uzivatel neexistuje!", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            //reads password and username from config of user
             password = config.Read("UserInfo", "Password");
             userName = config.Read("UserInfo", "Username");
 
