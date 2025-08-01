@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.gradientPanel1 = new GradientPanel();
-            this.kryptonLinkLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.emailLinkLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
+            this.jmenoLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.gradientPanel3 = new GradientPanel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.zobrazitComboBox = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -68,30 +68,30 @@
             this.gradientPanel1.Angle = 90F;
             this.gradientPanel1.Color1 = System.Drawing.Color.RoyalBlue;
             this.gradientPanel1.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.gradientPanel1.Controls.Add(this.kryptonLinkLabel2);
-            this.gradientPanel1.Controls.Add(this.kryptonLabel1);
+            this.gradientPanel1.Controls.Add(this.emailLinkLabel);
+            this.gradientPanel1.Controls.Add(this.jmenoLabel);
             this.gradientPanel1.Location = new System.Drawing.Point(-7, -8);
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(554, 155);
             this.gradientPanel1.TabIndex = 0;
             // 
-            // kryptonLinkLabel2
+            // emailLinkLabel
             // 
-            this.kryptonLinkLabel2.Location = new System.Drawing.Point(121, 105);
-            this.kryptonLinkLabel2.Name = "kryptonLinkLabel2";
-            this.kryptonLinkLabel2.Size = new System.Drawing.Size(180, 33);
-            this.kryptonLinkLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.kryptonLinkLabel2.TabIndex = 3;
-            this.kryptonLinkLabel2.Values.Text = "sovak@tiscali.cz";
+            this.emailLinkLabel.Location = new System.Drawing.Point(121, 105);
+            this.emailLinkLabel.Name = "emailLinkLabel";
+            this.emailLinkLabel.Size = new System.Drawing.Size(180, 33);
+            this.emailLinkLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.emailLinkLabel.TabIndex = 3;
+            this.emailLinkLabel.Values.Text = "sovak@tiscali.cz";
             // 
-            // kryptonLabel1
+            // jmenoLabel
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(19, 60);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(242, 39);
-            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins SemiBold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.kryptonLabel1.TabIndex = 0;
-            this.kryptonLabel1.Values.Text = "pan Václav Sovák";
+            this.jmenoLabel.Location = new System.Drawing.Point(19, 60);
+            this.jmenoLabel.Name = "jmenoLabel";
+            this.jmenoLabel.Size = new System.Drawing.Size(242, 39);
+            this.jmenoLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins SemiBold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.jmenoLabel.TabIndex = 0;
+            this.jmenoLabel.Values.Text = "pan Václav Sovák";
             // 
             // gradientPanel3
             // 
@@ -431,8 +431,8 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private GradientPanel gradientPanel1;
         private GradientPanel gradientPanel3;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel kryptonLinkLabel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel jmenoLabel;
+        private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel emailLinkLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox zobrazitComboBox;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox autologCheckBox;

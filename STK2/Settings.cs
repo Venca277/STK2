@@ -23,6 +23,8 @@ namespace STK2
             userName = user;
             config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\{userName}\\", "config.ini"));
 
+            jmenoLabel.Text = config.Read("UserInfo", "Name");
+            emailLinkLabel.Text = config.Read("UserInfo", "email");
             autologCheckBox.Checked = config.Read("Settings", "autolog") == "true";
             email_pripominkaCheckBox.Checked = config.Read("Settings", "emails") == "true";
             sifrovaniCheckBox.Checked = config.Read("Settings", "cypher") == "true";
@@ -47,7 +49,10 @@ namespace STK2
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-
+            Personal personalForm = new Personal(userName);
+            personalForm.ShowDialog();
+            jmenoLabel.Text = config.Read("UserInfo", "Name");
+            emailLinkLabel.Text = config.Read("UserInfo", "email");
         }
     }
 }
