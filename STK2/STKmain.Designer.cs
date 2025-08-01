@@ -84,10 +84,13 @@
             this.palivoTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.pohonTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.stav_stkPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.vysledekEKPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.vysledekEKPanel = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.vysledekSTKPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.vysledekSTKPanel = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
+            this.platnostEKDateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.platnostSTKDateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.posledniSTKDateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.poznamkyTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -114,6 +117,7 @@
             this.poznamkySTKTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.vlastnictviTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.zakladni_infoPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.registraceDateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.barva_karoserietxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -128,10 +132,6 @@
             this.druh_vozidlatxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.spz_rztxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.ulozitLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
-            this.posledniSTKDateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.registraceDateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.platnostSTKDateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.platnostEKDateTimePicker = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.gradientPanel1 = new GradientPanel();
             this.logoutLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.nastaveniLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
@@ -141,9 +141,7 @@
             this.technicke_udajePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stav_stkPanel)).BeginInit();
             this.stav_stkPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vysledekEKPanel)).BeginInit();
             this.vysledekEKPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vysledekSTKPanel)).BeginInit();
             this.vysledekSTKPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.majitelPanel)).BeginInit();
             this.majitelPanel.SuspendLayout();
@@ -867,11 +865,11 @@
             // 
             // stav_stkPanel
             // 
+            this.stav_stkPanel.Controls.Add(this.vysledekEKPanel);
+            this.stav_stkPanel.Controls.Add(this.vysledekSTKPanel);
             this.stav_stkPanel.Controls.Add(this.platnostEKDateTimePicker);
             this.stav_stkPanel.Controls.Add(this.platnostSTKDateTimePicker);
             this.stav_stkPanel.Controls.Add(this.posledniSTKDateTimePicker);
-            this.stav_stkPanel.Controls.Add(this.vysledekEKPanel);
-            this.stav_stkPanel.Controls.Add(this.vysledekSTKPanel);
             this.stav_stkPanel.Controls.Add(this.poznamkyTextBox);
             this.stav_stkPanel.Controls.Add(this.label8);
             this.stav_stkPanel.Controls.Add(this.label9);
@@ -892,18 +890,17 @@
             // vysledekEKPanel
             // 
             this.vysledekEKPanel.Controls.Add(this.label16);
-            this.vysledekEKPanel.Location = new System.Drawing.Point(557, 134);
+            this.vysledekEKPanel.Location = new System.Drawing.Point(576, 134);
             this.vysledekEKPanel.Name = "vysledekEKPanel";
-            this.vysledekEKPanel.Size = new System.Drawing.Size(127, 46);
-            this.vysledekEKPanel.StateCommon.Color1 = System.Drawing.Color.Crimson;
-            this.vysledekEKPanel.TabIndex = 14;
+            this.vysledekEKPanel.Size = new System.Drawing.Size(127, 51);
+            this.vysledekEKPanel.TabIndex = 21;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Crimson;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label16.Location = new System.Drawing.Point(10, 5);
+            this.label16.Location = new System.Drawing.Point(3, 8);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(111, 36);
             this.label16.TabIndex = 0;
@@ -914,20 +911,64 @@
             this.vysledekSTKPanel.Controls.Add(this.label15);
             this.vysledekSTKPanel.Location = new System.Drawing.Point(220, 134);
             this.vysledekSTKPanel.Name = "vysledekSTKPanel";
-            this.vysledekSTKPanel.Size = new System.Drawing.Size(127, 46);
-            this.vysledekSTKPanel.StateCommon.Color1 = System.Drawing.Color.LimeGreen;
-            this.vysledekSTKPanel.TabIndex = 13;
+            this.vysledekSTKPanel.Size = new System.Drawing.Size(127, 51);
+            this.vysledekSTKPanel.TabIndex = 20;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.LimeGreen;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label15.Location = new System.Drawing.Point(23, 5);
+            this.label15.Location = new System.Drawing.Point(3, 8);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(82, 36);
             this.label15.TabIndex = 0;
             this.label15.Text = "Platná";
+            // 
+            // platnostEKDateTimePicker
+            // 
+            this.platnostEKDateTimePicker.Location = new System.Drawing.Point(324, 76);
+            this.platnostEKDateTimePicker.Name = "platnostEKDateTimePicker";
+            this.platnostEKDateTimePicker.Size = new System.Drawing.Size(436, 42);
+            this.platnostEKDateTimePicker.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.platnostEKDateTimePicker.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.platnostEKDateTimePicker.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.platnostEKDateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.platnostEKDateTimePicker.StateCommon.Border.Rounding = 20;
+            this.platnostEKDateTimePicker.StateCommon.Border.Width = 1;
+            this.platnostEKDateTimePicker.TabIndex = 19;
+            // 
+            // platnostSTKDateTimePicker
+            // 
+            this.platnostSTKDateTimePicker.Location = new System.Drawing.Point(324, 16);
+            this.platnostSTKDateTimePicker.Name = "platnostSTKDateTimePicker";
+            this.platnostSTKDateTimePicker.Size = new System.Drawing.Size(436, 42);
+            this.platnostSTKDateTimePicker.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.platnostSTKDateTimePicker.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.platnostSTKDateTimePicker.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.platnostSTKDateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.platnostSTKDateTimePicker.StateCommon.Border.Rounding = 20;
+            this.platnostSTKDateTimePicker.StateCommon.Border.Width = 1;
+            this.platnostSTKDateTimePicker.TabIndex = 18;
+            // 
+            // posledniSTKDateTimePicker
+            // 
+            this.posledniSTKDateTimePicker.Location = new System.Drawing.Point(324, 255);
+            this.posledniSTKDateTimePicker.Name = "posledniSTKDateTimePicker";
+            this.posledniSTKDateTimePicker.Size = new System.Drawing.Size(436, 42);
+            this.posledniSTKDateTimePicker.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.posledniSTKDateTimePicker.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.posledniSTKDateTimePicker.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.posledniSTKDateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.posledniSTKDateTimePicker.StateCommon.Border.Rounding = 20;
+            this.posledniSTKDateTimePicker.StateCommon.Border.Width = 1;
+            this.posledniSTKDateTimePicker.TabIndex = 17;
             // 
             // poznamkyTextBox
             // 
@@ -1056,7 +1097,7 @@
             this.majitelPanel.Controls.Add(this.label29);
             this.majitelPanel.Controls.Add(this.provozovatelTextBox);
             this.majitelPanel.Controls.Add(this.kontaktTextBox);
-            this.majitelPanel.Location = new System.Drawing.Point(1165, 64);
+            this.majitelPanel.Location = new System.Drawing.Point(1165, 76);
             this.majitelPanel.Name = "majitelPanel";
             this.majitelPanel.Size = new System.Drawing.Size(786, 432);
             this.majitelPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1186,7 +1227,7 @@
             this.historiePanel.Controls.Add(this.label33);
             this.historiePanel.Controls.Add(this.poznamkySTKTextBox);
             this.historiePanel.Controls.Add(this.vlastnictviTextBox);
-            this.historiePanel.Location = new System.Drawing.Point(1153, 94);
+            this.historiePanel.Location = new System.Drawing.Point(1153, 107);
             this.historiePanel.Name = "historiePanel";
             this.historiePanel.Size = new System.Drawing.Size(786, 432);
             this.historiePanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1304,6 +1345,21 @@
             this.zakladni_infoPanel.StateCommon.Color2 = System.Drawing.Color.Gray;
             this.zakladni_infoPanel.StateCommon.ColorAngle = 45F;
             this.zakladni_infoPanel.TabIndex = 10;
+            // 
+            // registraceDateTimePicker
+            // 
+            this.registraceDateTimePicker.Location = new System.Drawing.Point(324, 255);
+            this.registraceDateTimePicker.Name = "registraceDateTimePicker";
+            this.registraceDateTimePicker.Size = new System.Drawing.Size(436, 42);
+            this.registraceDateTimePicker.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.registraceDateTimePicker.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
+            this.registraceDateTimePicker.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
+            this.registraceDateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.registraceDateTimePicker.StateCommon.Border.Rounding = 20;
+            this.registraceDateTimePicker.StateCommon.Border.Width = 1;
+            this.registraceDateTimePicker.TabIndex = 18;
             // 
             // barva_karoserietxt
             // 
@@ -1495,66 +1551,6 @@
             this.ulozitLabel.Values.Text = "Uložit změny";
             this.ulozitLabel.LinkClicked += new System.EventHandler(this.ulozitLabel_LinkClicked);
             // 
-            // posledniSTKDateTimePicker
-            // 
-            this.posledniSTKDateTimePicker.Location = new System.Drawing.Point(324, 255);
-            this.posledniSTKDateTimePicker.Name = "posledniSTKDateTimePicker";
-            this.posledniSTKDateTimePicker.Size = new System.Drawing.Size(436, 42);
-            this.posledniSTKDateTimePicker.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.posledniSTKDateTimePicker.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.posledniSTKDateTimePicker.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.posledniSTKDateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.posledniSTKDateTimePicker.StateCommon.Border.Rounding = 20;
-            this.posledniSTKDateTimePicker.StateCommon.Border.Width = 1;
-            this.posledniSTKDateTimePicker.TabIndex = 17;
-            // 
-            // registraceDateTimePicker
-            // 
-            this.registraceDateTimePicker.Location = new System.Drawing.Point(324, 255);
-            this.registraceDateTimePicker.Name = "registraceDateTimePicker";
-            this.registraceDateTimePicker.Size = new System.Drawing.Size(436, 42);
-            this.registraceDateTimePicker.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.registraceDateTimePicker.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.registraceDateTimePicker.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.registraceDateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.registraceDateTimePicker.StateCommon.Border.Rounding = 20;
-            this.registraceDateTimePicker.StateCommon.Border.Width = 1;
-            this.registraceDateTimePicker.TabIndex = 18;
-            // 
-            // platnostSTKDateTimePicker
-            // 
-            this.platnostSTKDateTimePicker.Location = new System.Drawing.Point(324, 16);
-            this.platnostSTKDateTimePicker.Name = "platnostSTKDateTimePicker";
-            this.platnostSTKDateTimePicker.Size = new System.Drawing.Size(436, 42);
-            this.platnostSTKDateTimePicker.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.platnostSTKDateTimePicker.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.platnostSTKDateTimePicker.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.platnostSTKDateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.platnostSTKDateTimePicker.StateCommon.Border.Rounding = 20;
-            this.platnostSTKDateTimePicker.StateCommon.Border.Width = 1;
-            this.platnostSTKDateTimePicker.TabIndex = 18;
-            // 
-            // platnostEKDateTimePicker
-            // 
-            this.platnostEKDateTimePicker.Location = new System.Drawing.Point(324, 76);
-            this.platnostEKDateTimePicker.Name = "platnostEKDateTimePicker";
-            this.platnostEKDateTimePicker.Size = new System.Drawing.Size(436, 42);
-            this.platnostEKDateTimePicker.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.platnostEKDateTimePicker.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
-            this.platnostEKDateTimePicker.StateCommon.Border.Color2 = System.Drawing.Color.Gray;
-            this.platnostEKDateTimePicker.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.platnostEKDateTimePicker.StateCommon.Border.Rounding = 20;
-            this.platnostEKDateTimePicker.StateCommon.Border.Width = 1;
-            this.platnostEKDateTimePicker.TabIndex = 19;
-            // 
             // gradientPanel1
             // 
             this.gradientPanel1.Angle = 90F;
@@ -1628,10 +1624,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.stav_stkPanel)).EndInit();
             this.stav_stkPanel.ResumeLayout(false);
             this.stav_stkPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vysledekEKPanel)).EndInit();
             this.vysledekEKPanel.ResumeLayout(false);
             this.vysledekEKPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vysledekSTKPanel)).EndInit();
             this.vysledekSTKPanel.ResumeLayout(false);
             this.vysledekSTKPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.majitelPanel)).EndInit();
@@ -1683,9 +1677,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel vysledekSTKPanel;
         private System.Windows.Forms.Label label15;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel vysledekEKPanel;
         private System.Windows.Forms.Label label16;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel technicke_udajePanel;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox rozmeryTextBox;
@@ -1728,5 +1720,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker registraceDateTimePicker;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker platnostEKDateTimePicker;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker platnostSTKDateTimePicker;
+        private System.Windows.Forms.Panel vysledekEKPanel;
+        private System.Windows.Forms.Panel vysledekSTKPanel;
     }
 }
