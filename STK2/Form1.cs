@@ -20,13 +20,20 @@ namespace STK2
         public Form1()
         {
             InitializeComponent();
-
+            this.config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\", "seen.ini"));
+            if (config.Read("User", "autolog") == "true") {
+                this.config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\{config.Read("User", "Username")}\\", "config.ini"));-----------------------
+            }
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+
+
+
             this.config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\{loginTextBox.Text}\\", "config.ini"));
-            if(config == null){
+
+            if (config == null){
                 MessageBox.Show("Chyba při načítání konfiguračního souboru. Uzivatel neexistuje!", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error); 
                 return;
             }
@@ -35,6 +42,9 @@ namespace STK2
 
             if (password == hesloTextBox.Text && userName == loginTextBox.Text)
             {
+
+
+
                 this.Hide();
                 STKmain stkmain = new STKmain(userName);
                 stkmain.ShowDialog();

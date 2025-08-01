@@ -178,20 +178,20 @@ namespace STK2
             LoadPanelData();
             HidePanels();
             switch (settingsIndex) {
-                case 1:  zakladni_infoPanel.Visible = true; currentPanel = 1;
+                case 1:  zakladni_infoPanel.Visible = true; currentPanel = 1; kryptonComboBox1.SelectedIndex = 0;
                     break;
-                case 2:  stav_stkPanel.Visible = true; currentPanel = 2;
+                case 2:  stav_stkPanel.Visible = true; currentPanel = 2; kryptonComboBox1.SelectedIndex = 1;
                     break;
-                case 3:  technicke_udajePanel.Visible = true; currentPanel = 3;
+                case 3:  technicke_udajePanel.Visible = true; currentPanel = 3; kryptonComboBox1.SelectedIndex = 2;
                     break;
-                case 4:  majitelPanel.Visible = true; currentPanel = 4;
+                case 4:  majitelPanel.Visible = true; currentPanel = 4; kryptonComboBox1.SelectedIndex = 3;
                     break;
-                case 5:  historiePanel.Visible = true; currentPanel = 5;
+                case 5:  historiePanel.Visible = true; currentPanel = 5; kryptonComboBox1.SelectedIndex = 4;
                     break;
-                case -1:  zakladni_infoPanel.Visible = true; currentPanel = 1;
+                case -1:  zakladni_infoPanel.Visible = true; currentPanel = 1; kryptonComboBox1.SelectedIndex = 1;
                     break;
                 default:
-                     zakladni_infoPanel.Visible = true; currentPanel = 1;
+                     zakladni_infoPanel.Visible = true; currentPanel = 1; kryptonComboBox1.SelectedIndex = 1;
                     break;
             }
         }
@@ -324,25 +324,25 @@ namespace STK2
             switch (currentPanel)
             {
                 case 1:
-                    zakladni_infoPanel.Visible = true; currentPanel = 1;
+                    zakladni_infoPanel.Visible = true; currentPanel = 1; kryptonComboBox1.SelectedIndex = 0;
                     break;
                 case 2:
-                    stav_stkPanel.Visible = true; currentPanel = 2;
+                    stav_stkPanel.Visible = true; currentPanel = 2; kryptonComboBox1.SelectedIndex = 1;
                     break;
                 case 3:
-                    technicke_udajePanel.Visible = true; currentPanel = 3;
+                    technicke_udajePanel.Visible = true; currentPanel = 3; kryptonComboBox1.SelectedIndex = 2;
                     break;
                 case 4:
-                    majitelPanel.Visible = true; currentPanel = 4;
+                    majitelPanel.Visible = true; currentPanel = 4; kryptonComboBox1.SelectedIndex = 3;
                     break;
                 case 5:
-                    historiePanel.Visible = true; currentPanel = 5;
+                    historiePanel.Visible = true; currentPanel = 5; kryptonComboBox1.SelectedIndex = 4;
                     break;
                 case -1:
-                    zakladni_infoPanel.Visible = true; currentPanel = 1;
+                    zakladni_infoPanel.Visible = true; currentPanel = 1; kryptonComboBox1.SelectedIndex = 1;
                     break;
                 default:
-                    zakladni_infoPanel.Visible = true; currentPanel = 1;
+                    zakladni_infoPanel.Visible = true; currentPanel = 1; kryptonComboBox1.SelectedIndex = 1;
                     break;
             }
         }
@@ -406,5 +406,11 @@ namespace STK2
             notifyIcon1.ShowBalloonTip(5000);
         }
 
+        private void kryptonComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            HidePanels();
+            currentPanel = kryptonComboBox1.SelectedIndex + 1;
+            UpdatePanel();
+        }
     }
 }
