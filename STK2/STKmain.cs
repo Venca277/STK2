@@ -25,10 +25,12 @@ namespace STK2
         {
             InitializeComponent();
             this.userName = user;
-            
+            shrnutiTextBox.Visible = false;
+
             RefreshTreeView();
             ApplySettings();
             HidePanels();
+            shrnutiLoad();
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
@@ -166,6 +168,14 @@ namespace STK2
 
         private void kryptonTreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            if (kryptonTreeView1.SelectedNode.Name == "prehled") {
+                HidePanels();
+                shrnutiTextBox.Visible = true;
+                shrnutiLoad();
+                return;
+            }
+            shrnutiTextBox.Visible = false;
+
             if (!IsLeaf()) 
                 return;
             TreeNode selectedNode = kryptonTreeView1.SelectedNode;
@@ -417,6 +427,44 @@ namespace STK2
             HidePanels();
             currentPanel = kryptonComboBox1.SelectedIndex + 1;
             UpdatePanel();
+        }
+    
+        private void shrnutiLoad()
+        {
+            shrnutiTextBox.Clear();
+            shrnutiTextBox.Visible = true;
+            string[] sekce = Directory.GetDirectories(Path.Combine(Application.StartupPath, "users", userName));
+            foreach (string s in sekce)
+            {
+                string[] typy = Directory.GetDirectories(s);
+                foreach (string t in typy)
+                {
+                    string[] files = Directory.GetFiles(t, "*.json");
+                    foreach (string file in files)
+                    {
+                        var Jfile = File.ReadAllText(file);
+                        var json = JsonConvert.DeserializeObject<VozidloData>(Jfile);
+
+                        DateTime now = DateTime.Now;
+                        DateTime platnostSTK = json.stavSTK.platnostSTK;
+                        TimeSpan zbyva = now - platnostSTK;
+                        int roky = now.Year - platnostSTK.Year;
+                        int mesice = now.Month - platnostSTK.Month;
+                        int dny = now.Day - platnostSTK.Day;
+                        string zbytek = "";
+
+                        if(roky > 0)
+                            zbytek += $"{roky} roků  ";
+                        if(mesice > 0)
+                            zbytek += $"{mesice} měsíců  ";
+                        if(dny > 0)
+                            zbytek += $"{dny} dní.";
+
+                        shrnutiTextBox.Text += $"Vozidlo  - {json.zakladniInfo.znacka} -  do STK zbývá:  {zbytek} {Environment.NewLine}";
+                        shrnutiTextBox.Text += $"{Environment.NewLine}";
+                    }
+                }
+            }
         }
     }
 }

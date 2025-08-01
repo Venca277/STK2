@@ -59,6 +59,7 @@
             treeNode14,
             treeNode15,
             treeNode16});
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Hlavní přehled");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(STKmain));
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonTreeView1 = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
@@ -136,6 +137,7 @@
             this.logoutLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.nastaveniLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.nameLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.shrnutiTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.technicke_udajePanel)).BeginInit();
             this.technicke_udajePanel.SuspendLayout();
@@ -206,11 +208,14 @@
             treeNode16.Text = "Speciální vozidla";
             treeNode17.Name = "specialni_vozidla";
             treeNode17.Text = "Speciální a jiná vozidla";
+            treeNode18.Name = "prehled";
+            treeNode18.Text = "Hlavní přehled";
             this.kryptonTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode5,
             treeNode8,
             treeNode12,
-            treeNode17});
+            treeNode17,
+            treeNode18});
             this.kryptonTreeView1.Palette = this.kryptonPalette1;
             this.kryptonTreeView1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonTreeView1.Size = new System.Drawing.Size(410, 432);
@@ -659,7 +664,7 @@
             this.technicke_udajePanel.Controls.Add(this.label23);
             this.technicke_udajePanel.Controls.Add(this.palivoTextBox);
             this.technicke_udajePanel.Controls.Add(this.pohonTextBox);
-            this.technicke_udajePanel.Location = new System.Drawing.Point(1205, 12);
+            this.technicke_udajePanel.Location = new System.Drawing.Point(1202, 12);
             this.technicke_udajePanel.Name = "technicke_udajePanel";
             this.technicke_udajePanel.Size = new System.Drawing.Size(786, 432);
             this.technicke_udajePanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1227,7 +1232,7 @@
             this.historiePanel.Controls.Add(this.label33);
             this.historiePanel.Controls.Add(this.poznamkySTKTextBox);
             this.historiePanel.Controls.Add(this.vlastnictviTextBox);
-            this.historiePanel.Location = new System.Drawing.Point(1153, 107);
+            this.historiePanel.Location = new System.Drawing.Point(1153, 106);
             this.historiePanel.Name = "historiePanel";
             this.historiePanel.Size = new System.Drawing.Size(786, 432);
             this.historiePanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1338,7 +1343,7 @@
             this.zakladni_infoPanel.Controls.Add(this.label6);
             this.zakladni_infoPanel.Controls.Add(this.druh_vozidlatxt);
             this.zakladni_infoPanel.Controls.Add(this.spz_rztxt);
-            this.zakladni_infoPanel.Location = new System.Drawing.Point(1191, 27);
+            this.zakladni_infoPanel.Location = new System.Drawing.Point(1188, 24);
             this.zakladni_infoPanel.Name = "zakladni_infoPanel";
             this.zakladni_infoPanel.Size = new System.Drawing.Size(786, 432);
             this.zakladni_infoPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -1593,12 +1598,30 @@
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Values.Text = "jmeno";
             // 
+            // shrnutiTextBox
+            // 
+            this.shrnutiTextBox.Location = new System.Drawing.Point(438, 12);
+            this.shrnutiTextBox.Multiline = true;
+            this.shrnutiTextBox.Name = "shrnutiTextBox";
+            this.shrnutiTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.shrnutiTextBox.Size = new System.Drawing.Size(688, 432);
+            this.shrnutiTextBox.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.shrnutiTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.shrnutiTextBox.StateCommon.Border.Rounding = 20;
+            this.shrnutiTextBox.StateCommon.Border.Width = 1;
+            this.shrnutiTextBox.StateCommon.Content.Color1 = System.Drawing.Color.RoyalBlue;
+            this.shrnutiTextBox.StateCommon.Content.Font = new System.Drawing.Font("Poppins ExtraBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.shrnutiTextBox.TabIndex = 17;
+            // 
             // STKmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(1218, 734);
+            this.Controls.Add(this.shrnutiTextBox);
             this.Controls.Add(this.ulozitLabel);
             this.Controls.Add(this.gradientPanel1);
             this.Controls.Add(this.historiePanel);
@@ -1722,5 +1745,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker platnostSTKDateTimePicker;
         private System.Windows.Forms.Panel vysledekEKPanel;
         private System.Windows.Forms.Panel vysledekSTKPanel;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox shrnutiTextBox;
     }
 }
