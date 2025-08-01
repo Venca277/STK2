@@ -39,6 +39,7 @@
             this.autologCheckBox = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.loginTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -230,12 +231,20 @@
             this.loginTextBox.StateCommon.Border.Width = 1;
             this.loginTextBox.TabIndex = 11;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(169, 314);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(359, 38);
+            this.progressBar1.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(691, 459);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.loginTextBox);
             this.Controls.Add(this.autologCheckBox);
@@ -267,6 +276,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox autologCheckBox;
         private System.Windows.Forms.Label label3;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox loginTextBox;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 

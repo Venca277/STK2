@@ -15,6 +15,7 @@ namespace STK2
     public partial class Settings : KryptonForm
     {
         IniFile config;
+        IniFile seenConfig;
         private string userName;
         public Settings(string user)
         {
@@ -39,7 +40,8 @@ namespace STK2
             config.Write("Settings", "emails", email_pripominkaCheckBox.Checked ? "true" : "false");
             config.Write("Settings", "cypher", sifrovaniCheckBox.Checked ? "true" : "false");
             config.Write("Settings", "show", zobrazitComboBox.SelectedIndex.ToString());
-
+            seenConfig = new IniFile(Path.Combine(Application.StartupPath, "seen.ini"));
+            seenConfig.Write("User", "autolog", autologCheckBox.Checked ? "true" : "false");
             MessageBox.Show("Nastavení byla uložena.", "Informace", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
