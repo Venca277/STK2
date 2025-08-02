@@ -1,16 +1,17 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using Microsoft.VisualBasic;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
-using Microsoft.VisualBasic;
-using System.IO;
-using Newtonsoft.Json;
 
 namespace STK2
 {
@@ -31,6 +32,7 @@ namespace STK2
             ApplySettings();
             HidePanels();
             shrnutiLoad();
+            setReminderEvent();
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
@@ -84,11 +86,11 @@ namespace STK2
                 return;
 
             var result = MessageBox.Show("Opravdu odebrat vozidlo?", "Potvrzení odebrání", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(result == DialogResult.No)
+            if (result == DialogResult.No)
                 return;
 
-            File.Delete(Path.Combine(Application.StartupPath, "users", userName, 
-                kryptonTreeView1.SelectedNode.Parent.Parent.Name, kryptonTreeView1.SelectedNode.Parent.Name, 
+            File.Delete(Path.Combine(Application.StartupPath, "users", userName,
+                kryptonTreeView1.SelectedNode.Parent.Parent.Name, kryptonTreeView1.SelectedNode.Parent.Name,
                 kryptonTreeView1.SelectedNode.Text + ".json"));
 
             kryptonTreeView1.SelectedNode.Remove();
@@ -122,9 +124,9 @@ namespace STK2
             string sectionName = dirs[dirs.Length - 2]; // Get the parent directory name
             string typeName = dirs[dirs.Length - 1]; // Get the current directory name
 
-            foreach(TreeNode root in kryptonTreeView1.Nodes)
+            foreach (TreeNode root in kryptonTreeView1.Nodes)
             {
-                if(root.Name != sectionName)
+                if (root.Name != sectionName)
                     continue;
 
                 foreach (TreeNode typeNode in root.Nodes)
@@ -140,7 +142,7 @@ namespace STK2
 
         }
 
-        public void ApplySettings() { 
+        public void ApplySettings() {
             IniFile config = new IniFile(Path.Combine(Application.StartupPath, "users", userName, "config.ini"));
             if (config == null)
             {
@@ -176,7 +178,7 @@ namespace STK2
             }
             shrnutiTextBox.Visible = false;
 
-            if (!IsLeaf()) 
+            if (!IsLeaf())
                 return;
             TreeNode selectedNode = kryptonTreeView1.SelectedNode;
             //TODO: Load vehicle data from JSON file
@@ -188,25 +190,25 @@ namespace STK2
             LoadPanelData();
             HidePanels();
             switch (settingsIndex) {
-                case 1:  zakladni_infoPanel.Visible = true; currentPanel = 1; kryptonComboBox1.SelectedIndex = 0;
+                case 1: zakladni_infoPanel.Visible = true; currentPanel = 1; kryptonComboBox1.SelectedIndex = 0;
                     break;
-                case 2:  stav_stkPanel.Visible = true; currentPanel = 2; kryptonComboBox1.SelectedIndex = 1;
+                case 2: stav_stkPanel.Visible = true; currentPanel = 2; kryptonComboBox1.SelectedIndex = 1;
                     break;
-                case 3:  technicke_udajePanel.Visible = true; currentPanel = 3; kryptonComboBox1.SelectedIndex = 2;
+                case 3: technicke_udajePanel.Visible = true; currentPanel = 3; kryptonComboBox1.SelectedIndex = 2;
                     break;
-                case 4:  majitelPanel.Visible = true; currentPanel = 4; kryptonComboBox1.SelectedIndex = 3;
+                case 4: majitelPanel.Visible = true; currentPanel = 4; kryptonComboBox1.SelectedIndex = 3;
                     break;
-                case 5:  historiePanel.Visible = true; currentPanel = 5; kryptonComboBox1.SelectedIndex = 4;
+                case 5: historiePanel.Visible = true; currentPanel = 5; kryptonComboBox1.SelectedIndex = 4;
                     break;
-                case -1:  zakladni_infoPanel.Visible = true; currentPanel = 1; kryptonComboBox1.SelectedIndex = 1;
+                case -1: zakladni_infoPanel.Visible = true; currentPanel = 1; kryptonComboBox1.SelectedIndex = 1;
                     break;
                 default:
-                     zakladni_infoPanel.Visible = true; currentPanel = 1; kryptonComboBox1.SelectedIndex = 1;
+                    zakladni_infoPanel.Visible = true; currentPanel = 1; kryptonComboBox1.SelectedIndex = 1;
                     break;
             }
         }
 
-        private void HidePanels() { 
+        private void HidePanels() {
             majitelPanel.Visible = false;
             historiePanel.Visible = false;
             stav_stkPanel.Visible = false;
@@ -218,7 +220,7 @@ namespace STK2
             majitelPanel.Location = new Point(290, 7);
             historiePanel.Location = new Point(290, 7);
         }
-        
+
         private void InitializeJSON(string odpoved)
         {
             VozidloData data = new VozidloData
@@ -318,9 +320,9 @@ namespace STK2
         private void nextButton_Click(object sender, EventArgs e)
         {
             HidePanels();
-            if(currentPanel == -1)
+            if (currentPanel == -1)
                 return;
-            currentPanel = (currentPanel+1) > 5 ? 1 : currentPanel + 1;
+            currentPanel = (currentPanel + 1) > 5 ? 1 : currentPanel + 1;
             UpdatePanel();
         }
 
@@ -409,10 +411,19 @@ namespace STK2
             vozidloData.majitel.zmena_vlastnictvi = vlastnictviTextBox.Text;
             //-----------------------------------------
 
+
+
             TreeNode node = kryptonTreeView1.SelectedNode;
             string json = JsonConvert.SerializeObject(vozidloData, Formatting.Indented);
             File.WriteAllText(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
                     $"{node.Parent.Parent.Name}\\{node.Parent.Name}\\", node.Text + ".json"), json);
+
+            DateTime platnost = vozidloData.stavSTK.platnostSTK;
+            platnost = platnost.AddDays(-5);
+            if (platnost >= DateTime.Today)
+            {
+                
+            }
 
             notifyIcon1.BalloonTipTitle = "Upozornění!";
             notifyIcon1.BalloonTipText = "Data vozidla byla úspěšně uložena!";
@@ -428,7 +439,7 @@ namespace STK2
             currentPanel = kryptonComboBox1.SelectedIndex + 1;
             UpdatePanel();
         }
-    
+
         private void shrnutiLoad()
         {
             shrnutiTextBox.Clear();
@@ -453,16 +464,60 @@ namespace STK2
                         int dny = now.Day - platnostSTK.Day;
                         string zbytek = "";
 
-                        if(roky > 0)
+                        if (roky > 0)
                             zbytek += $"{roky} roků  ";
-                        if(mesice > 0)
+                        if (mesice > 0)
                             zbytek += $"{mesice} měsíců  ";
-                        if(dny > 0)
+                        if (dny > 0)
                             zbytek += $"{dny} dní.";
 
                         shrnutiTextBox.Text += $"Vozidlo  - {json.zakladniInfo.znacka} -  do STK zbývá:  {zbytek} {Environment.NewLine}";
                         shrnutiTextBox.Text += $"{Environment.NewLine}";
                     }
+                }
+            }
+        }
+
+        private void setReminderEvent()
+        {
+            string nazevUkoluDaily = "STKReminder_Daily";
+            string nazevUkoluOnLogon = "STKReminder_OnLogon";
+            string reminderPath = Path.Combine(Application.StartupPath, "STKreminder.exe");
+
+            // Denní úkol v 8:00 ráno
+            string prikazDaily = $@"/Create /SC DAILY /TN ""{nazevUkoluDaily}"" /TR ""\""{reminderPath}\"""" /ST 08:00 /F";
+
+            // Úkol při přihlášení uživatele
+            string prikazOnLogon = $@"/Create /SC ONLOGON /TN ""{nazevUkoluOnLogon}"" /TR ""\""{reminderPath}\"""" /F";
+
+            // Spuštění příkazů
+            launchCommand("schtasks", prikazDaily);
+            launchCommand("schtasks", prikazOnLogon);
+
+            MessageBox.Show("Upomínky byly naplánovány.");
+        }
+
+        void launchCommand(string exe, string args)
+        {
+            ProcessStartInfo psi = new ProcessStartInfo
+            {
+                FileName = exe,
+                Arguments = args,
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true
+            };
+
+            using (Process proc = Process.Start(psi))
+            {
+                string output = proc.StandardOutput.ReadToEnd();
+                string error = proc.StandardError.ReadToEnd();
+                proc.WaitForExit();
+
+                if (!string.IsNullOrEmpty(error))
+                {
+                    MessageBox.Show("Chyba při plánování: " + error);
                 }
             }
         }
