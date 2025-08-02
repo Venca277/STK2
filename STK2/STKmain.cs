@@ -480,21 +480,27 @@ namespace STK2
 
         private void setReminderEvent()
         {
+            // checks wheter emails are enabled and sets up reminders
+            IniFile config = new IniFile(Path.Combine(Application.StartupPath, "users", userName, "config.ini"));
+            if (config.Read("Settings", "emails") == "false")
+                return;
+
+
             string nazevUkoluDaily = "STKReminder_Daily";
             string nazevUkoluOnLogon = "STKReminder_OnLogon";
             string reminderPath = Path.Combine(Application.StartupPath, "STKreminder.exe");
 
-            // Denní úkol v 8:00 ráno
+            // daily reminder task
             string prikazDaily = $@"/Create /SC DAILY /TN ""{nazevUkoluDaily}"" /TR ""\""{reminderPath}\"""" /ST 08:00 /F";
 
-            // Úkol při přihlášení uživatele
+            // on logon reminder task
             string prikazOnLogon = $@"/Create /SC ONLOGON /TN ""{nazevUkoluOnLogon}"" /TR ""\""{reminderPath}\"""" /F";
 
-            // Spuštění příkazů
+            // launch the commands to create the scheduled tasks
             launchCommand("schtasks", prikazDaily);
             launchCommand("schtasks", prikazOnLogon);
 
-            MessageBox.Show("Upomínky byly naplánovány.");
+            //MessageBox.Show("Upomínky byly naplánovány.");
         }
 
         void launchCommand(string exe, string args)

@@ -1,14 +1,15 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ComponentFactory.Krypton.Toolkit;
-using System.IO;
 
 namespace STK2
 {
@@ -53,6 +54,23 @@ namespace STK2
             personalForm.ShowDialog();
             jmenoLabel.Text = config.Read("UserInfo", "Name");
             emailLinkLabel.Text = config.Read("UserInfo", "email");
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            var odpoved = MessageBox.Show("Opravdu chcete smazat plánovače? Tato akce vypne emailové upomínky! Obnova oznámení proběhne po restartu programu pokud je možnost zaškrtnutá.", "Potvrzení smazání", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (odpoved == DialogResult.Yes) {
+                string nazevUkoluDaily = "STKReminder_Daily";
+                string nazevUkoluOnLogon = "STKReminder_OnLogon";
+                string prikaz1 = $@"/Delete /TN ""{nazevUkoluDaily}"" /F";
+                string prikaz2 = $@"/Delete /TN ""{nazevUkoluOnLogon}"" /F";
+                Process.Start("schtasks", prikaz1);
+                Process.Start("schtasks", prikaz2);
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }
