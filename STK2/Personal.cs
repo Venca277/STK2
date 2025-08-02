@@ -27,6 +27,7 @@ namespace STK2
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("POZOR! Změna osobních údajů má vliv na emailové oznámení! PROJDĚTE A ULOŽTE svá vozidla, aby došlo k propsání změn, zejména emailové adresy. Pokud emailová oznámení nepoužíváte toto oznámení se vás netýka.", "Informace", MessageBoxButtons.OK, MessageBoxIcon.Information);
             config.Write("UserInfo", "Name", jmenoTextBox.Text);
             config.Write("UserInfo", "email", emailTextBox.Text);
             config.Write("UserInfo", "phone", telefonTextBox.Text);

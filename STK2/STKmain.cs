@@ -450,6 +450,8 @@ namespace STK2
                     mail.datumSTK = vozidloData.stavSTK.platnostSTK.ToString("dd.MM.yyyy");
                     mail.vozidlo = vozidloData.zakladniInfo.znacka;
                     mail.email = config.Read("UserInfo", "email");
+                    string safe = JsonConvert.SerializeObject(allmails, Formatting.Indented);
+                    File.WriteAllText(Path.Combine(Application.StartupPath, "config.json"), safe);
                     return; // Exit after updating the existing reminder
                 }
             }
