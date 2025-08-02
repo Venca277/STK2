@@ -133,11 +133,11 @@
             this.druh_vozidlatxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.spz_rztxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.ulozitLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
+            this.shrnutiTextBox = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.gradientPanel1 = new GradientPanel();
             this.logoutLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.nastaveniLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.nameLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.shrnutiTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.technicke_udajePanel)).BeginInit();
             this.technicke_udajePanel.SuspendLayout();
@@ -1556,6 +1556,24 @@
             this.ulozitLabel.Values.Text = "Uložit změny";
             this.ulozitLabel.LinkClicked += new System.EventHandler(this.ulozitLabel_LinkClicked);
             // 
+            // shrnutiTextBox
+            // 
+            this.shrnutiTextBox.Location = new System.Drawing.Point(440, 12);
+            this.shrnutiTextBox.Name = "shrnutiTextBox";
+            this.shrnutiTextBox.ReadOnly = true;
+            this.shrnutiTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.shrnutiTextBox.Size = new System.Drawing.Size(773, 432);
+            this.shrnutiTextBox.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
+            this.shrnutiTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gainsboro;
+            this.shrnutiTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.shrnutiTextBox.StateCommon.Border.Rounding = 20;
+            this.shrnutiTextBox.StateCommon.Border.Width = 1;
+            this.shrnutiTextBox.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.shrnutiTextBox.TabIndex = 18;
+            this.shrnutiTextBox.Text = "";
+            // 
             // gradientPanel1
             // 
             this.gradientPanel1.Angle = 90F;
@@ -1597,23 +1615,6 @@
             this.nameLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Values.Text = "jmeno";
-            // 
-            // shrnutiTextBox
-            // 
-            this.shrnutiTextBox.Location = new System.Drawing.Point(438, 12);
-            this.shrnutiTextBox.Multiline = true;
-            this.shrnutiTextBox.Name = "shrnutiTextBox";
-            this.shrnutiTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.shrnutiTextBox.Size = new System.Drawing.Size(688, 432);
-            this.shrnutiTextBox.StateCommon.Back.Color1 = System.Drawing.Color.WhiteSmoke;
-            this.shrnutiTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.shrnutiTextBox.StateCommon.Border.Rounding = 20;
-            this.shrnutiTextBox.StateCommon.Border.Width = 1;
-            this.shrnutiTextBox.StateCommon.Content.Color1 = System.Drawing.Color.RoyalBlue;
-            this.shrnutiTextBox.StateCommon.Content.Font = new System.Drawing.Font("Poppins ExtraBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.shrnutiTextBox.TabIndex = 17;
             // 
             // STKmain
             // 
@@ -1745,6 +1746,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker platnostSTKDateTimePicker;
         private System.Windows.Forms.Panel vysledekEKPanel;
         private System.Windows.Forms.Panel vysledekSTKPanel;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox shrnutiTextBox;
+        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox shrnutiTextBox;
     }
 }

@@ -26,13 +26,15 @@ namespace STK2
         {
             InitializeComponent();
             this.userName = user;
-            shrnutiTextBox.Visible = false;
 
             RefreshTreeView();
             ApplySettings();
             HidePanels();
-            shrnutiLoad();
             setReminderEvent();
+            removeExpired();
+
+            //selecting to show user the overview panel
+            kryptonTreeView1.SelectedNode = kryptonTreeView1.Nodes[4];
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
@@ -55,10 +57,10 @@ namespace STK2
             // selected node is not null and is exactly one under the root
             if (kryptonTreeView1.Nodes.Contains(kryptonTreeView1.SelectedNode.Parent))
             {
-
                 //asks user to imput vehicle name
                 string odpoved = Interaction.InputBox("Zadej název vozidla:", "Název - lze změnit později", "např Audi R8");
-                odpoved = string.IsNullOrEmpty(odpoved) ? "temp1" : odpoved;
+                if(string.IsNullOrEmpty(odpoved))
+                    return;
                 TreeNode odpovedNode = new TreeNode(odpoved);
                 kryptonTreeView1.SelectedNode.Nodes.Add(odpovedNode);
 
@@ -94,6 +96,7 @@ namespace STK2
                 kryptonTreeView1.SelectedNode.Text + ".json"));
 
             kryptonTreeView1.SelectedNode.Remove();
+            HidePanels();
             notifyIcon1.BalloonTipTitle = "Upozornění!";
             notifyIcon1.BalloonTipText = "Vozidlo bylo odebrano!";
             notifyIcon1.ShowBalloonTip(5000);
@@ -231,6 +234,7 @@ namespace STK2
                 majitel = new Majitel(),
                 nehody = new Nehody()
             };
+            data.zakladniInfo.znacka = odpoved;
             string json = JsonConvert.SerializeObject(data, Formatting.Indented);
             File.WriteAllText(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
                     $"{kryptonTreeView1.SelectedNode.Parent.Name}\\{kryptonTreeView1.SelectedNode.Name}\\", odpoved + ".json"), json);
@@ -418,16 +422,50 @@ namespace STK2
             File.WriteAllText(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
                     $"{node.Parent.Parent.Name}\\{node.Parent.Name}\\", node.Text + ".json"), json);
 
-            DateTime platnost = vozidloData.stavSTK.platnostSTK;
-            platnost = platnost.AddDays(-5);
-            if (platnost >= DateTime.Today)
-            {
-                
-            }
-
             notifyIcon1.BalloonTipTitle = "Upozornění!";
             notifyIcon1.BalloonTipText = "Data vozidla byla úspěšně uložena!";
             notifyIcon1.ShowBalloonTip(5000);
+
+            //==========================================================
+            // This part is experimental, after saving a vehicle data,
+            // program checks configuration file for email reminders
+            // to modify reminder of current vehicle if anything changed.
+            // In case nothing was found it adds a new reminder to this
+            // vehicle. Expired reminders are removed in separate task.
+            //==========================================================
+            DateTime platnost = vozidloData.stavSTK.platnostSTK;
+            platnost = platnost.AddDays(-5);
+
+            if (platnost < DateTime.Today)
+                return;
+
+            IniFile config = new IniFile(Path.Combine(Application.StartupPath, "users", userName, "config.ini"));
+            var sendmails = File.ReadAllText(Path.Combine(Application.StartupPath, "config.json"));
+            List<Config> allmails = JsonConvert.DeserializeObject<List<Config>>(sendmails);
+            foreach (Config mail in allmails)
+            {
+                if (mail.spz == vozidloData.zakladniInfo.spz) 
+                {
+                    mail.datumpripominka = platnost.ToString("dd.MM.yyyy");
+                    mail.datumSTK = vozidloData.stavSTK.platnostSTK.ToString("dd.MM.yyyy");
+                    mail.vozidlo = vozidloData.zakladniInfo.znacka;
+                    mail.email = config.Read("UserInfo", "email");
+                    return; // Exit after updating the existing reminder
+                }
+            }
+
+            allmails.Add(new Config
+            {
+                email = config.Read("UserInfo", "email"),
+                spz = vozidloData.zakladniInfo.spz,
+                datumpripominka = platnost.ToString("dd.MM.yyyy"),
+                datumSTK = vozidloData.stavSTK.platnostSTK.ToString("dd.MM.yyyy"),
+                vozidlo = vozidloData.zakladniInfo.znacka
+            });
+            string vystup = JsonConvert.SerializeObject(allmails, Formatting.Indented);
+            File.WriteAllText(Path.Combine(Application.StartupPath, "config.json"), vystup);
+            //==========================================================
+            //==========================================================
         }
 
         private void kryptonComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -458,10 +496,9 @@ namespace STK2
 
                         DateTime now = DateTime.Now;
                         DateTime platnostSTK = json.stavSTK.platnostSTK;
-                        TimeSpan zbyva = now - platnostSTK;
-                        int roky = now.Year - platnostSTK.Year;
-                        int mesice = now.Month - platnostSTK.Month;
-                        int dny = now.Day - platnostSTK.Day;
+                        int roky = platnostSTK.Year - now.Year;
+                        int mesice = platnostSTK.Month - now.Month;
+                        int dny = platnostSTK.Day - now.Day;
                         string zbytek = "";
 
                         if (roky > 0)
@@ -471,8 +508,25 @@ namespace STK2
                         if (dny > 0)
                             zbytek += $"{dny} dní.";
 
-                        shrnutiTextBox.Text += $"Vozidlo  - {json.zakladniInfo.znacka} -  do STK zbývá:  {zbytek} {Environment.NewLine}";
-                        shrnutiTextBox.Text += $"{Environment.NewLine}";
+                        
+                        Color barvaTextu = Color.Blue;
+                        Color barvaVozidla = Color.Green;
+                        Color barvaZbytku = Color.Red;
+
+                        shrnutiTextBox.SelectionColor = barvaTextu;
+                        shrnutiTextBox.AppendText("Vozidlo  - ");
+
+                        shrnutiTextBox.SelectionColor = barvaVozidla;
+                        shrnutiTextBox.AppendText($"{json.zakladniInfo.znacka}");
+
+                        shrnutiTextBox.SelectionColor = barvaTextu;
+                        shrnutiTextBox.AppendText(" -  do STK zbývá:  ");
+
+                        shrnutiTextBox.SelectionColor = barvaZbytku;
+                        shrnutiTextBox.AppendText($"{zbytek}");
+
+                        shrnutiTextBox.AppendText(Environment.NewLine + Environment.NewLine);
+
                     }
                 }
             }
@@ -526,6 +580,18 @@ namespace STK2
                     MessageBox.Show("Chyba při plánování: " + error);
                 }
             }
+        }
+
+        private void removeExpired() {
+            var json = File.ReadAllText(Path.Combine(Application.StartupPath, "config.json"));
+            List<Config> allmails = JsonConvert.DeserializeObject<List<Config>>(json);
+            foreach (Config mail in allmails)
+            {
+                if(DateTime.Parse(mail.datumpripominka) < DateTime.Now || DateTime.Parse(mail.datumSTK) < DateTime.Now)
+                    allmails.Remove(mail);
+            }
+            string vystup = JsonConvert.SerializeObject(allmails, Formatting.Indented);
+            File.WriteAllText(Path.Combine(Application.StartupPath, "config.json"), vystup);
         }
     }
 }
