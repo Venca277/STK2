@@ -97,8 +97,10 @@
             // gradientPanel3
             // 
             this.gradientPanel3.Angle = -90F;
+            this.gradientPanel3.BackColor = System.Drawing.Color.Transparent;
             this.gradientPanel3.Color1 = System.Drawing.Color.RoyalBlue;
             this.gradientPanel3.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.gradientPanel3.ForeColor = System.Drawing.Color.Transparent;
             this.gradientPanel3.Location = new System.Drawing.Point(-7, 596);
             this.gradientPanel3.Name = "gradientPanel3";
             this.gradientPanel3.Size = new System.Drawing.Size(554, 127);
