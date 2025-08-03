@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.loginTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.kryptonLinkLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -238,12 +239,22 @@
             this.progressBar1.Size = new System.Drawing.Size(359, 38);
             this.progressBar1.TabIndex = 13;
             // 
+            // kryptonLinkLabel1
+            // 
+            this.kryptonLinkLabel1.Location = new System.Drawing.Point(284, 453);
+            this.kryptonLinkLabel1.Name = "kryptonLinkLabel1";
+            this.kryptonLinkLabel1.Size = new System.Drawing.Size(116, 29);
+            this.kryptonLinkLabel1.TabIndex = 14;
+            this.kryptonLinkLabel1.Values.Text = "Vytvořit učet";
+            this.kryptonLinkLabel1.LinkClicked += new System.EventHandler(this.kryptonLinkLabel1_LinkClicked);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(691, 459);
+            this.ClientSize = new System.Drawing.Size(691, 485);
+            this.Controls.Add(this.kryptonLinkLabel1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.loginTextBox);
@@ -277,6 +288,7 @@
         private System.Windows.Forms.Label label3;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox loginTextBox;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel kryptonLinkLabel1;
     }
 }
 

@@ -22,7 +22,7 @@ namespace STK2
         {
             InitializeComponent();
             userName = user;
-            config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\{userName}\\", "config.ini"));
+            config = new IniFile(Path.Combine(Paths.Users, userName, "config.ini"));
 
             jmenoLabel.Text = config.Read("UserInfo", "Name");
             emailLinkLabel.Text = config.Read("UserInfo", "email");
@@ -43,7 +43,7 @@ namespace STK2
             config.Write("Settings", "emails", email_pripominkaCheckBox.Checked ? "true" : "false");
             config.Write("Settings", "cypher", sifrovaniCheckBox.Checked ? "true" : "false");
             config.Write("Settings", "show", zobrazitComboBox.SelectedIndex.ToString());
-            seenConfig = new IniFile(Path.Combine(Application.StartupPath, "seen.ini"));
+            seenConfig = new IniFile(Paths.Seen);
             seenConfig.Write("User", "autolog", autologCheckBox.Checked ? "true" : "false");
             MessageBox.Show("Nastavení byla uložena.", "Informace", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

@@ -30,7 +30,7 @@ namespace STK2
             RefreshTreeView();
             ApplySettings();
             HidePanels();
-            setReminderEvent();
+            //setReminderEvent(); will be handled by the installer
             removeExpired();
 
             //selecting to show user the overview panel
@@ -91,9 +91,12 @@ namespace STK2
             if (result == DialogResult.No)
                 return;
 
-            File.Delete(Path.Combine(Application.StartupPath, "users", userName,
+            File.Delete(Path.Combine(Paths.Users, userName,
                 kryptonTreeView1.SelectedNode.Parent.Parent.Name, kryptonTreeView1.SelectedNode.Parent.Name,
                 kryptonTreeView1.SelectedNode.Text + ".json"));
+            //File.Delete(Path.Combine(Application.StartupPath, "users", userName,
+            //    kryptonTreeView1.SelectedNode.Parent.Parent.Name, kryptonTreeView1.SelectedNode.Parent.Name,
+            //    kryptonTreeView1.SelectedNode.Text + ".json"));
 
             kryptonTreeView1.SelectedNode.Remove();
             HidePanels();
@@ -105,7 +108,9 @@ namespace STK2
         public void RefreshTreeView()
         {
             //kryptonTreeView1.Nodes.Clear();
-            string[] sekce = Directory.GetDirectories(Path.Combine(Application.StartupPath, "users", userName));
+            string[] sekce = Directory.GetDirectories(Path.Combine(Paths.Users, userName));
+
+            //string[] sekce = Directory.GetDirectories(Path.Combine(Application.StartupPath, "users", userName));
             foreach (string sekcePath in sekce)
             {
                 string[] typy = Directory.GetDirectories(sekcePath);
@@ -146,7 +151,9 @@ namespace STK2
         }
 
         public void ApplySettings() {
-            IniFile config = new IniFile(Path.Combine(Application.StartupPath, "users", userName, "config.ini"));
+            IniFile config = new IniFile(Path.Combine(Paths.Users, userName, "config.ini"));
+
+            //IniFile config = new IniFile(Path.Combine(Application.StartupPath, "users", userName, "config.ini"));
             if (config == null)
             {
                 MessageBox.Show("Chyba při načítání konfiguračního souboru. Uzivatel neexistuje!", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -185,7 +192,7 @@ namespace STK2
                 return;
             TreeNode selectedNode = kryptonTreeView1.SelectedNode;
             //TODO: Load vehicle data from JSON file
-            string json = File.ReadAllText(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
+            string json = File.ReadAllText(Path.Combine(Paths.Users, userName,
                     $"{selectedNode.Parent.Parent.Name}\\{selectedNode.Parent.Name}\\", selectedNode.Text + ".json"));
             vozidloData = JsonConvert.DeserializeObject<VozidloData>(json);
 
@@ -236,7 +243,7 @@ namespace STK2
             };
             data.zakladniInfo.znacka = odpoved;
             string json = JsonConvert.SerializeObject(data, Formatting.Indented);
-            File.WriteAllText(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
+            File.WriteAllText(Path.Combine(Paths.Users, userName,
                     $"{kryptonTreeView1.SelectedNode.Parent.Name}\\{kryptonTreeView1.SelectedNode.Name}\\", odpoved + ".json"), json);
         }
 
@@ -419,7 +426,7 @@ namespace STK2
 
             TreeNode node = kryptonTreeView1.SelectedNode;
             string json = JsonConvert.SerializeObject(vozidloData, Formatting.Indented);
-            File.WriteAllText(Path.Combine($"C:\\Users\\venca\\source\\repos\\STK2\\STK2\\bin\\Debug\\users\\{userName}\\" +
+            File.WriteAllText(Path.Combine(Paths.Users, userName,
                     $"{node.Parent.Parent.Name}\\{node.Parent.Name}\\", node.Text + ".json"), json);
 
             notifyIcon1.BalloonTipTitle = "Upozornění!";
@@ -439,8 +446,8 @@ namespace STK2
             if (platnost < DateTime.Today)
                 return;
 
-            IniFile config = new IniFile(Path.Combine(Application.StartupPath, "users", userName, "config.ini"));
-            var sendmails = File.ReadAllText(Path.Combine(Application.StartupPath, "config.json"));
+            IniFile config = new IniFile(Path.Combine(Paths.Users, userName, "config.ini"));
+            var sendmails = File.ReadAllText(Paths.Config);
             List<Config> allmails = JsonConvert.DeserializeObject<List<Config>>(sendmails);
             foreach (Config mail in allmails)
             {
@@ -451,7 +458,7 @@ namespace STK2
                     mail.vozidlo = vozidloData.zakladniInfo.znacka;
                     mail.email = config.Read("UserInfo", "email");
                     string safe = JsonConvert.SerializeObject(allmails, Formatting.Indented);
-                    File.WriteAllText(Path.Combine(Application.StartupPath, "config.json"), safe);
+                    File.WriteAllText(Paths.Config, safe);
                     return; // Exit after updating the existing reminder
                 }
             }
@@ -465,7 +472,7 @@ namespace STK2
                 vozidlo = vozidloData.zakladniInfo.znacka
             });
             string vystup = JsonConvert.SerializeObject(allmails, Formatting.Indented);
-            File.WriteAllText(Path.Combine(Application.StartupPath, "config.json"), vystup);
+            File.WriteAllText(Paths.Config, vystup);
             //==========================================================
             //==========================================================
         }
@@ -484,7 +491,7 @@ namespace STK2
         {
             shrnutiTextBox.Clear();
             shrnutiTextBox.Visible = true;
-            string[] sekce = Directory.GetDirectories(Path.Combine(Application.StartupPath, "users", userName));
+            string[] sekce = Directory.GetDirectories(Path.Combine(Paths.Users, userName));
             foreach (string s in sekce)
             {
                 string[] typy = Directory.GetDirectories(s);
@@ -537,14 +544,14 @@ namespace STK2
         private void setReminderEvent()
         {
             // checks wheter emails are enabled and sets up reminders
-            IniFile config = new IniFile(Path.Combine(Application.StartupPath, "users", userName, "config.ini"));
+            IniFile config = new IniFile(Path.Combine(Paths.Users, userName, "config.ini"));
             if (config.Read("Settings", "emails") == "false")
                 return;
 
 
             string nazevUkoluDaily = "STKReminder_Daily";
             string nazevUkoluOnLogon = "STKReminder_OnLogon";
-            string reminderPath = Path.Combine(Application.StartupPath, "STKreminder.exe");
+            string reminderPath = Path.Combine(Paths.ReminderExe);
 
             // daily reminder task
             string prikazDaily = $@"/Create /SC DAILY /TN ""{nazevUkoluDaily}"" /TR ""\""{reminderPath}\"""" /ST 08:00 /F";
@@ -583,9 +590,9 @@ namespace STK2
                 }
             }
         }
-
+        
         private void removeExpired() {
-            var json = File.ReadAllText(Path.Combine(Application.StartupPath, "config.json"));
+            var json = File.ReadAllText(Paths.Config);
             List<Config> allmails = JsonConvert.DeserializeObject<List<Config>>(json);
             foreach (Config mail in allmails)
             {
@@ -593,7 +600,7 @@ namespace STK2
                     allmails.Remove(mail);
             }
             string vystup = JsonConvert.SerializeObject(allmails, Formatting.Indented);
-            File.WriteAllText(Path.Combine(Application.StartupPath, "config.json"), vystup);
+            File.WriteAllText(Paths.Config, vystup);
         }
     }
 }

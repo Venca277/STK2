@@ -19,7 +19,7 @@ namespace STK2
         {
             this.user = user;
             InitializeComponent();
-            config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\{user}\\", "config.ini"));
+            config = new IniFile(Path.Combine(Paths.Users, user, "config.ini"));
             jmenoTextBox.Text = config.Read("UserInfo", "Name");
             emailTextBox.Text = config.Read("UserInfo", "email");
             telefonTextBox.Text = config.Read("UserInfo", "phone");

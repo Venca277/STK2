@@ -20,15 +20,18 @@ namespace STK2
         private string userName = "";
         private string password = "";
         private bool autolog = false;
+
         public Form1(bool notAfterLogout)
         {
             InitializeComponent();
+            checkIntegrity();
             progressBar1.Visible = false;
-            seenConfig = new IniFile(Path.Combine(Application.StartupPath, "seen.ini"));
-            
+            seenConfig = new IniFile(Paths.Seen);
+
             //fill login and password if autolog is enabled
             if (seenConfig.Read("User", "autolog") == "true" && notAfterLogout) {
-                config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\{seenConfig.Read("User", "Username")}\\", "config.ini"));
+                config = new IniFile(Path.Combine(Paths.Users + $"\\{seenConfig.Read("User", "Username")}", "config.ini"));
+                //config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\{seenConfig.Read("User", "Username")}\\", "config.ini"));
                 loginTextBox.Text = config.Read("UserInfo", "Username");
                 hesloTextBox.Text = config.Read("UserInfo", "Password");
                 config.Write("Settings", "autolog", "true");
@@ -40,7 +43,7 @@ namespace STK2
 
         private async void kryptonButton1_Click(object sender, EventArgs e)
         {
-            if(autolog)
+            if (autolog)
             {
                 progressBar1.Visible = true;
                 progressBar1.Style = ProgressBarStyle.Continuous;
@@ -56,7 +59,8 @@ namespace STK2
             }
 
             //gets access to config of user in case other wants to login
-            config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\{loginTextBox.Text}\\", "config.ini"));
+            config = new IniFile(Path.Combine(Paths.Users + $"\\{loginTextBox.Text}\\", "config.ini"));
+            //config = new IniFile(Path.Combine(Application.StartupPath + $"\\users\\{loginTextBox.Text}\\", "config.ini"));
 
             //checks if config exists
             if (config == null)
@@ -86,6 +90,32 @@ namespace STK2
 
             label2.Text = "Nesprávné heslo!";
             hesloTextBox.Clear();
+        }
+
+        private void kryptonLinkLabel1_LinkClicked(object sender, EventArgs e)
+        {
+            CreateAccount createAccountForm = new CreateAccount();
+            createAccountForm.ShowDialog();
+        }
+
+        private void checkIntegrity()
+        {
+            if (!Directory.Exists(Paths.AppFolder))
+            {
+                Directory.CreateDirectory(Paths.AppFolder);
+            }
+            if (!Directory.Exists(Paths.Users))
+            {
+                Directory.CreateDirectory(Paths.Users);
+            }
+            if (!File.Exists(Paths.Seen))
+            {
+                File.WriteAllText(Paths.Seen, "[User]\nUsername=\nautolog=false");
+            }
+            if (!File.Exists(Paths.Config))
+            {
+                File.WriteAllText(Paths.Config, "[\n]");
+            }
         }
     }
 }
