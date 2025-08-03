@@ -189,6 +189,7 @@ namespace STK2
             if (kryptonTreeView1.SelectedNode.Name == "prehled") {
                 HidePanels();
                 shrnutiTextBox.Visible = true;
+                this.Text = "STK údržba vozidel - přehled";
                 shrnutiLoad();
                 return;
             }
@@ -197,8 +198,10 @@ namespace STK2
             if (IsType()) {
                 pridatButton.Enabled = true;
                 odebratButton.Enabled = false;
+                this.Text = $"STK údržba vozidel";
             } else {
                 pridatButton.Enabled = false;
+                this.Text = $"STK údržba vozidel";
                 if (IsLeaf())
                     odebratButton.Enabled = true;
                 else
@@ -216,6 +219,7 @@ namespace STK2
             vozidloData = JsonConvert.DeserializeObject<VozidloData>(json);
 
             //TODO : Show vehicle data in the appropriate panel
+            this.Text = $"STK údržba vozidel - prohlíží {vozidloData.zakladniInfo.znacka}";
             LoadPanelData();
             HidePanels();
             switch (settingsIndex) {
@@ -293,9 +297,9 @@ namespace STK2
             platnostSTKDateTimePicker.Value = (platSTK > platnostSTKDateTimePicker.MinDate && platSTK < platnostSTKDateTimePicker.MaxDate) ? platSTK : DateTime.Now;
             var platEK = vozidloData.stavSTK.platnostEmise;
             platnostEKDateTimePicker.Value = (platEK > platnostEKDateTimePicker.MinDate && platEK < platnostEKDateTimePicker.MaxDate) ? platEK : DateTime.Now;
-            if (vozidloData.stavSTK.vysledekSTK) { vysledekSTKPanel.BackColor = Color.LimeGreen; label15.Text = "Platná"; }
+            if (vozidloData.stavSTK.platnostSTK >= DateTime.Today) { vysledekSTKPanel.BackColor = Color.LimeGreen; label15.Text = "Platná"; }
             else { vysledekSTKPanel.BackColor = Color.Crimson; label15.Text = "Neplatná"; }
-            if (vozidloData.stavSTK.vysledekEmise) { vysledekEKPanel.BackColor = Color.LimeGreen; label16.Text = "Platná"; }
+            if (vozidloData.stavSTK.platnostEmise >= DateTime.Today) { vysledekEKPanel.BackColor = Color.LimeGreen; label16.Text = "Platná"; }
             else { vysledekEKPanel.BackColor = Color.Crimson; label16.Text = "Neplatná"; }
             typSTKTextBox.Text = vozidloData.stavSTK.typSTK;
             var poslSTK = vozidloData.stavSTK.posledniSTK;
@@ -651,13 +655,43 @@ namespace STK2
         private void removeExpired() {
             var json = File.ReadAllText(Paths.Config);
             List<Config> allmails = JsonConvert.DeserializeObject<List<Config>>(json);
-            foreach (Config mail in allmails)
-            {
-                if(DateTime.Parse(mail.datumpripominka) < DateTime.Now || DateTime.Parse(mail.datumSTK) < DateTime.Now)
-                    allmails.Remove(mail);
-            }
+            if (allmails == null)
+                return;
+
+            allmails.RemoveAll(mail =>
+                DateTime.Parse(mail.datumpripominka) < DateTime.Today ||
+                DateTime.Parse(mail.datumSTK) < DateTime.Today);
+
             string vystup = JsonConvert.SerializeObject(allmails, Formatting.Indented);
             File.WriteAllText(Paths.Config, vystup);
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            if (vysledekSTKPanel.BackColor == Color.LimeGreen)
+            {
+                vysledekSTKPanel.BackColor = Color.Crimson;
+                label15.Text = "Neplatná";
+            }
+            else
+            {
+                vysledekSTKPanel.BackColor = Color.LimeGreen;
+                label15.Text = "Platná";
+            }
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            if (vysledekEKPanel.BackColor == Color.LimeGreen)
+            {
+                vysledekEKPanel.BackColor = Color.Crimson;
+                label16.Text = "Neplatná";
+            }
+            else
+            {
+                vysledekEKPanel.BackColor = Color.LimeGreen;
+                label16.Text = "Platná";
+            }
         }
     }
 }
