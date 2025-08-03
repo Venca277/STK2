@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.gradientPanel1 = new GradientPanel();
-            this.emailLinkLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
-            this.jmenoLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.gradientPanel3 = new GradientPanel();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.zobrazitComboBox = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.autologCheckBox = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
@@ -45,8 +41,12 @@
             this.stornoButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.gradientPanel1.SuspendLayout();
+            this.gradientPanel3 = new GradientPanel();
+            this.gradientPanel1 = new GradientPanel();
+            this.emailLinkLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
+            this.jmenoLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.zobrazitComboBox)).BeginInit();
+            this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -63,48 +63,6 @@
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
             this.kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
-            // 
-            // gradientPanel1
-            // 
-            this.gradientPanel1.Angle = 90F;
-            this.gradientPanel1.Color1 = System.Drawing.Color.RoyalBlue;
-            this.gradientPanel1.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.gradientPanel1.Controls.Add(this.emailLinkLabel);
-            this.gradientPanel1.Controls.Add(this.jmenoLabel);
-            this.gradientPanel1.Location = new System.Drawing.Point(-7, -8);
-            this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(554, 155);
-            this.gradientPanel1.TabIndex = 0;
-            // 
-            // emailLinkLabel
-            // 
-            this.emailLinkLabel.Location = new System.Drawing.Point(121, 105);
-            this.emailLinkLabel.Name = "emailLinkLabel";
-            this.emailLinkLabel.Size = new System.Drawing.Size(180, 33);
-            this.emailLinkLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.emailLinkLabel.TabIndex = 3;
-            this.emailLinkLabel.Values.Text = "sovak@tiscali.cz";
-            // 
-            // jmenoLabel
-            // 
-            this.jmenoLabel.Location = new System.Drawing.Point(19, 60);
-            this.jmenoLabel.Name = "jmenoLabel";
-            this.jmenoLabel.Size = new System.Drawing.Size(242, 39);
-            this.jmenoLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins SemiBold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.jmenoLabel.TabIndex = 0;
-            this.jmenoLabel.Values.Text = "pan Václav Sovák";
-            // 
-            // gradientPanel3
-            // 
-            this.gradientPanel3.Angle = -90F;
-            this.gradientPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.gradientPanel3.Color1 = System.Drawing.Color.RoyalBlue;
-            this.gradientPanel3.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.gradientPanel3.ForeColor = System.Drawing.Color.Transparent;
-            this.gradientPanel3.Location = new System.Drawing.Point(-7, 596);
-            this.gradientPanel3.Name = "gradientPanel3";
-            this.gradientPanel3.Size = new System.Drawing.Size(554, 127);
-            this.gradientPanel3.TabIndex = 1;
             // 
             // kryptonLabel2
             // 
@@ -412,6 +370,48 @@
             this.kryptonButton2.Values.Text = "Smazat plánovače";
             this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
+            // gradientPanel3
+            // 
+            this.gradientPanel3.Angle = -90F;
+            this.gradientPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.gradientPanel3.Color1 = System.Drawing.Color.RoyalBlue;
+            this.gradientPanel3.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.gradientPanel3.ForeColor = System.Drawing.Color.Transparent;
+            this.gradientPanel3.Location = new System.Drawing.Point(-7, 596);
+            this.gradientPanel3.Name = "gradientPanel3";
+            this.gradientPanel3.Size = new System.Drawing.Size(554, 127);
+            this.gradientPanel3.TabIndex = 1;
+            // 
+            // gradientPanel1
+            // 
+            this.gradientPanel1.Angle = 90F;
+            this.gradientPanel1.Color1 = System.Drawing.Color.RoyalBlue;
+            this.gradientPanel1.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.gradientPanel1.Controls.Add(this.emailLinkLabel);
+            this.gradientPanel1.Controls.Add(this.jmenoLabel);
+            this.gradientPanel1.Location = new System.Drawing.Point(-7, -8);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(554, 155);
+            this.gradientPanel1.TabIndex = 0;
+            // 
+            // emailLinkLabel
+            // 
+            this.emailLinkLabel.Location = new System.Drawing.Point(121, 105);
+            this.emailLinkLabel.Name = "emailLinkLabel";
+            this.emailLinkLabel.Size = new System.Drawing.Size(180, 33);
+            this.emailLinkLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.emailLinkLabel.TabIndex = 3;
+            this.emailLinkLabel.Values.Text = "sovak@tiscali.cz";
+            // 
+            // jmenoLabel
+            // 
+            this.jmenoLabel.Location = new System.Drawing.Point(19, 60);
+            this.jmenoLabel.Name = "jmenoLabel";
+            this.jmenoLabel.Size = new System.Drawing.Size(242, 39);
+            this.jmenoLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Poppins SemiBold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.jmenoLabel.TabIndex = 0;
+            this.jmenoLabel.Values.Text = "pan Václav Sovák";
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -430,14 +430,17 @@
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.gradientPanel3);
             this.Controls.Add(this.gradientPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Settings";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nastavení";
+            ((System.ComponentModel.ISupportInitialize)(this.zobrazitComboBox)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.zobrazitComboBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

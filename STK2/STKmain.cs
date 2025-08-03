@@ -440,37 +440,75 @@ namespace STK2
             // In case nothing was found it adds a new reminder to this
             // vehicle. Expired reminders are removed in separate task.
             //==========================================================
-            DateTime platnost = vozidloData.stavSTK.platnostSTK;
-            platnost = platnost.AddDays(-5);
+            // TODO: Rewrite so TWO reminders are created (5 and 30 day prior)
+            //==========================================================
+            bool found5 = false;
+            bool found30 = false;
+            DateTime platnost5 = vozidloData.stavSTK.platnostSTK;
+            DateTime platnost30 = vozidloData.stavSTK.platnostSTK;
+            platnost5 = platnost5.AddDays(-5);
+            platnost30 = platnost30.AddDays(-30);
 
-            if (platnost < DateTime.Today)
+
+            if ((platnost30 < DateTime.Today) && (platnost5 < DateTime.Today))
                 return;
 
             IniFile config = new IniFile(Path.Combine(Paths.Users, userName, "config.ini"));
             var sendmails = File.ReadAllText(Paths.Config);
             List<Config> allmails = JsonConvert.DeserializeObject<List<Config>>(sendmails);
+            if (allmails == null)
+                allmails = new List<Config>();
+            
             foreach (Config mail in allmails)
             {
-                if (mail.spz == vozidloData.zakladniInfo.spz) 
+                if (mail.spz != vozidloData.zakladniInfo.spz)
+                    continue;
+
+                if (mail.typpripominka == "5dni")
                 {
-                    mail.datumpripominka = platnost.ToString("dd.MM.yyyy");
+                    mail.datumpripominka = platnost5.ToString("dd.MM.yyyy");
                     mail.datumSTK = vozidloData.stavSTK.platnostSTK.ToString("dd.MM.yyyy");
                     mail.vozidlo = vozidloData.zakladniInfo.znacka;
                     mail.email = config.Read("UserInfo", "email");
-                    string safe = JsonConvert.SerializeObject(allmails, Formatting.Indented);
-                    File.WriteAllText(Paths.Config, safe);
-                    return; // Exit after updating the existing reminder
+                    found5 = true;
                 }
+                else if (mail.typpripominka == "30dni")
+                {
+                    mail.datumpripominka = platnost30.ToString("dd.MM.yyyy");
+                    mail.datumSTK = vozidloData.stavSTK.platnostSTK.ToString("dd.MM.yyyy");
+                    mail.vozidlo = vozidloData.zakladniInfo.znacka;
+                    mail.email = config.Read("UserInfo", "email");
+                    found30 = true;
+                }
+
+                //string safe = JsonConvert.SerializeObject(allmails, Formatting.Indented);
+                //File.WriteAllText(Paths.Config, safe);
+                //return; // Exit after updating the existing reminder
             }
 
-            allmails.Add(new Config
-            {
-                email = config.Read("UserInfo", "email"),
-                spz = vozidloData.zakladniInfo.spz,
-                datumpripominka = platnost.ToString("dd.MM.yyyy"),
-                datumSTK = vozidloData.stavSTK.platnostSTK.ToString("dd.MM.yyyy"),
-                vozidlo = vozidloData.zakladniInfo.znacka
-            });
+            if (!found5){
+                allmails.Add(new Config
+                {
+                    email = config.Read("UserInfo", "email"),
+                    spz = vozidloData.zakladniInfo.spz,
+                    datumpripominka = platnost5.ToString("dd.MM.yyyy"),
+                    typpripominka = "5dni",
+                    datumSTK = vozidloData.stavSTK.platnostSTK.ToString("dd.MM.yyyy"),
+                    vozidlo = vozidloData.zakladniInfo.znacka
+                });
+            }
+            if (!found30) {
+                allmails.Add(new Config
+                {
+                    email = config.Read("UserInfo", "email"),
+                    spz = vozidloData.zakladniInfo.spz,
+                    datumpripominka = platnost30.ToString("dd.MM.yyyy"),
+                    typpripominka = "30dni",
+                    datumSTK = vozidloData.stavSTK.platnostSTK.ToString("dd.MM.yyyy"),
+                    vozidlo = vozidloData.zakladniInfo.znacka
+                });
+            }
+
             string vystup = JsonConvert.SerializeObject(allmails, Formatting.Indented);
             File.WriteAllText(Paths.Config, vystup);
             //==========================================================
