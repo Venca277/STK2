@@ -178,6 +178,12 @@ namespace STK2
             return true;
         }
 
+        public bool IsType() {
+            if (kryptonTreeView1.Nodes.Contains(kryptonTreeView1.SelectedNode.Parent))
+                return true;
+            return false;
+        }
+
         private void kryptonTreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (kryptonTreeView1.SelectedNode.Name == "prehled") {
@@ -188,8 +194,21 @@ namespace STK2
             }
             shrnutiTextBox.Visible = false;
 
+            if (IsType()) {
+                pridatButton.Enabled = true;
+                odebratButton.Enabled = false;
+            } else {
+                pridatButton.Enabled = false;
+                if (IsLeaf())
+                    odebratButton.Enabled = true;
+                else
+                    odebratButton.Enabled = false;
+            }
+
             if (!IsLeaf())
                 return;
+           
+                
             TreeNode selectedNode = kryptonTreeView1.SelectedNode;
             //TODO: Load vehicle data from JSON file
             string json = File.ReadAllText(Path.Combine(Paths.Users, userName,
